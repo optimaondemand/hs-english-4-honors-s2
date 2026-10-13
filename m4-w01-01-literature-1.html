@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.3.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A); TEKS 110.39(c)(7)(A)" />
+<title>English IV Honors &middot; An Ordinary Hobbit</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring &middot; Week 1 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">An Ordinary Hobbit</div>
+        <div style="font-size: 16px; color: #1a2340;">Literature &middot; Week 1</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The book opens in a comfortable country, and the comfort is part of the story.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Prologue presents hobbits as a people who like quiet, good food and gifts. Chapter 1 shows that world at its most pleasant, a birthday party, and then shows the party end in a departure and a ring passed to an heir.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe what the Prologue says hobbits value and what they have stopped noticing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can trace how the Ring moves from Bilbo to Frodo in Chapter 1.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain why Tolkien begins with an ordinary person rather than a warrior or a king.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read the Prologue in your copy, especially &ldquo;Concerning Hobbits&rdquo; and &ldquo;Of the Finding of the Ring&rdquo;.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book I, Chapter 1, &ldquo;A Long-expected Party&rdquo;, in your copy.</div>
+        </div>
+    </div>
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 7px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128220; HISTORICAL CONTEXT</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">J. R. R. Tolkien (1892&ndash;1973) was a scholar of Old English who taught at Oxford. He served as a soldier in the First World War, including at the Battle of the Somme in 1916, and two of his closest school friends were killed in that war. <em>The Hobbit</em> appeared in 1937. <em>The Fellowship of the Ring</em> came out in 1954 as the first of three volumes of <em>The Lord of the Rings</em>, which Tolkien had written as one long story.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PEOPLE OF THE SHIRE</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Prologue reads like the notes of a patient historian. Hobbits are a small, quiet people who like well-farmed land, six meals a day, parties, and the giving of presents. They distrust machines more complicated than a water-mill, and they avoid the &ldquo;Big Folk&rdquo; by disappearing from the road. The Shire has almost no government. Families manage their own affairs, the old laws are kept freely because they are ancient and just, and the one real official, the mayor, mostly presides at banquets.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The narrator is fond of this people and also exact about them. Two details carry the weight. First, hobbits are tougher than their comfort suggests: the Prologue says that people who love good things can do without them when they must. Second, the long peace has made them forgetful:</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">They were, in fact, sheltered, but they had ceased to remember it.</q> (Prologue)</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The sentence turns the whole opening into a question. The Shire is safe, and the hobbits do not know who or what keeps it safe. The Mathom-house at Michel Delving shows the habit in small: it stores weapons and gifts that nobody uses and nobody will throw away.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which description best fits the Prologue&rsquo;s attitude toward the hobbits?</div>
+            <div class="widget-options">
+                <button data-response="This keeps both halves of the Prologue. The warmth is clear in the details of meals and gifts, and the limit is clear in the remark that the hobbits ceased to remember how they are sheltered.">Affectionate and exact: the narrator likes them and also names what they have forgotten.</button>
+                <button data-response="The teasing is real, but the narrator also praises their toughness and their skill with a bow. A purely mocking reading skips the passages that credit them with courage when pressed.">Mocking: the narrator treats the hobbits as small, greedy and foolish.</button>
+                <button data-response="The Prologue says the opposite about their standing: for most of history they were thought of very little importance. Their later importance is described as coming by no wish of their own.">Admiring: the narrator presents the hobbits as equals of Elves and Men.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE PARTY AND THE RING PASSED ON</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chapter 1 gathers the Shire into one field. Bilbo turns one hundred and eleven and Frodo turns thirty-three, the age at which a hobbit comes of age, on the same day. One hundred and forty-four guests eat through the afternoon, Gandalf supplies the fireworks, and the talk in the inn beforehand shows what the district thinks of Bilbo: rich, odd, and too well preserved to be natural.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The speech ends the party. Bilbo announces that he is leaving, puts on the Ring, and vanishes. Nearly every guest takes it for a bad joke. Frodo alone sits silent beside the empty chair, and the narrator says why: he realizes that he loves the old hobbit.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The private scene afterward is where the chapter changes tone. Bilbo means to leave the Ring to Frodo and cannot let go of it. When Gandalf presses him, his voice turns sharp, and he calls the ring by the name Gollum used:</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">It is mine, I tell you. My own. My Precious. Yes, my Precious.</q> (Book I, Chapter 1)</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gandalf answers with anger of his own and then with an appeal to old trust. Bilbo yields, jokes that the party was meant to make the giving-away easier, and walks out into the night. Gandalf places the envelope on the mantelpiece, and later advises Frodo not to use the Ring at all and to keep it secret and safe. Frodo thinks it may prove useful.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9201; TIMELINE &middot; FROM THE FINDING TO THE PARTY (SHIRE-RECKONING)</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:stretch;">
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>S.R. 1341</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Bilbo leaves Bag End with Gandalf and thirteen dwarves on a quest for dragon-gold.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>Under the mountains</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">In the dark of the goblin tunnels he finds a ring, and wins a riddle-game with Gollum.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>S.R. 1342</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Bilbo returns to Bag End and keeps the ring secret from nearly everyone.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>Twelve years before the party</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">At ninety-nine, Bilbo adopts young Frodo as his heir.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>S.R. 1401</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">The eleventy-first birthday. Bilbo vanishes from his own party. The Ring passes to Frodo.</div></div>
+            </div>
+        </div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. The Prologue links the loose government to a people who forgot how their peace was kept. The detail prepares the reader for a danger the hobbits are not ready to see." data-hint="Reread the lines about the Thain and the mayor, then the sentence about being sheltered without remembering it. Ask what a people with no need of rules has stopped having to think about.">
+                <div class="widget-row-prompt">1. The Prologue notes that the Shire has almost no government and that the mayor mostly presides at banquets. What does the detail suggest?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The hobbits are lazy, and the narrator wants readers to look down on them for being so.</button>
+                    <button data-choice="1">The hobbits have lived so long at peace that they treat safety as the natural order.</button>
+                    <button data-choice="2">The Shire is a quiet tyranny in which the real rulers keep their laws hidden away.</button>
+                    <button data-choice="3">The story will stay light and comic, since a place with no government cannot be in danger.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Correct. The admission links the whole party to the Ring. The number of guests and the flash are jokes and stage-craft, and Bilbo says it is time Frodo was his own master." data-hint="Look for the detail that connects the party to the Ring, since the Ring is the thing Bilbo cannot discuss calmly. The other details are about numbers and effects.">
+                <div class="widget-row-prompt">2. In the private scene, Bilbo calls his departure a joke. Which detail shows the joke is not the whole truth?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He tells Gandalf the party was partly meant to make giving up the Ring easier.</button>
+                    <button data-choice="1">He admits that the guest list was chosen to reach exactly one hundred and forty-four.</button>
+                    <button data-choice="2">He says the flash of light at the speech was an addition Gandalf made to the plan.</button>
+                    <button data-choice="3">He tells Gandalf that Frodo is not yet ready to be master of Bag End.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="2" data-fb="Right. The narrator says Frodo was in on the joke and still found he loved Bilbo dearly. Everyone else treats it as a prank; Frodo hears the leave-taking." data-hint="The narrator reports what Frodo realizes while he sits there. Find that sentence and ask whether it describes anger, boredom, or loss.">
+                <div class="widget-row-prompt">3. After Bilbo vanishes, Frodo alone says nothing. What does the silence show?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is angry that Bilbo ruined the birthday that the two of them share.</button>
+                    <button data-choice="1">He is bored by the speech, as most of the guests were, and wants to leave.</button>
+                    <button data-choice="2">He understands that the departure is real and feels it as a loss.</button>
+                    <button data-choice="3">He is already planning to follow Bilbo along the road that night.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY AN ORDINARY HOBBIT</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Tolkien could have begun with a war or a throne. He begins with gossip about a rich neighbor and an inheritance, and he describes the finding of the Ring in the Prologue as luck. The narrator also says that in the days of Bilbo and Frodo the hobbits became, <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">by no wish of their own, both important and renowned</q> (Prologue).</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">That phrase sets the pattern for the book. Importance arrives without being sought, and it arrives in the middle of ordinary life: a party, a will, a label on a parcel. Frodo&rsquo;s first response to the Ring is that it may be useful. The reader is told more than he is, and the gap between the two is where the dread of the opening chapters comes from.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Shire-reckoning</strong>: the hobbits&rsquo; calendar, counted from the year they settled the Shire.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>heir</strong>: the person who receives a legal inheritance, here Bag End and the Ring.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>mathom</strong>: Tolkien&rsquo;s word for an object with no present use that its owner will not discard.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>narrator</strong>: the voice that tells the story; here a historian-like voice that stands outside the hobbits.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 1 &middot; An Ordinary Hobbit</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A)" />
+<title>English IV Honors &middot; The Old Forest</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring &middot; Week 3 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 3</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Old Forest</div>
+        <div style="font-size: 16px; color: #1a2340;">Literature &middot; Week 3</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The Old Forest is a place that was not made for travelers, and it does not pretend to be.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The hobbits expect a short cut and find a world with its own life, its own memory and its own aims. The chapter sets that world against the Shire, where nature had learned to mind its manners, and then it shows how a danger can arrive looking like rest.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe how the Forest treats the travelers and what Merry&rsquo;s account says about why.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can trace how the hobbits are steered from their planned route to the river.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how Old Man Willow&rsquo;s trap works and what it shows about danger that arrives as comfort.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book I, Chapter 6, &ldquo;The Old Forest&rdquo;, in your copy.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A FOREST WITH ITS OWN LIFE</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The chapter begins with a crossing. Merry leads the party out of Crickhollow before dawn, through a brick tunnel under the Hedge, and an iron gate clangs shut behind them. Fatty Bolger, who is staying, says good-bye at the tunnel mouth. The narrator calls the clang of the gate ominous, and Merry says plainly that they are now outside the Shire.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Merry&rsquo;s own account of the Forest is careful. He does not believe the nursery stories about goblins and wolves. He says the Forest is queer in another way: everything in it is more alive and more aware than things in the Shire, and <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">the trees do not like strangers. They watch you.</q> (Book I, Chapter 6) He also gives the reason. Long ago the trees massed against the Hedge, and the hobbits cut down hundreds of them and burned a long strip of the Forest. The trees gave up the attack, and they have been unfriendly since.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The hobbits soon feel the same thing from the inside. They sense that they are <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">being watched with disapproval, deepening to dislike and even enmity</q> (Book I, Chapter 6). Pippin shouts that he means no harm, and the cry falls as if into a curtain. The Forest gives no answer.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">What kind of place does the Old Forest seem to be in the hobbits&rsquo; first hours inside it?</div>
+            <div class="widget-options">
+                <button data-response="The text says otherwise. The hobbits feel watched with disapproval that deepens to enmity, and a branch falls behind them when Frodo sings of woods ending. The Forest takes notice.">An indifferent place: it neither helps nor harms them.</button>
+                <button data-response="This fits Merry&rsquo;s account of the burned strip and the hobbits&rsquo; own feeling of being watched. The Forest has a grievance and acts on it.">A place with its own life and memory, which treats strangers as intruders.</button>
+                <button data-response="Pippin tries the loud voice, and nothing responds. The dangers here are not the kind that bravado answers.">A place of ordinary dangers that courage and a loud voice would overcome.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; BEING STEERED</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The route that Frodo chose is a short, simple one: through the Forest to the East Road. The Forest does not allow it. The path from the Bonfire Glade rises to a green hilltop and then bends toward the Withywindle, the valley Merry names as the source of the Forest&rsquo;s queerness. When the hobbits turn north to avoid it, folds in the ground block them. Thickets give way to the right and downhill and refuse to give way to the left and uphill. The narrator reports the pattern as a fact: <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">They were being headed off, and were simply following a course chosen for them</q> (Book I, Chapter 6).</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128506; HOW THE FOREST STEERS THEM</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:stretch;">
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>1 &middot; The gate</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Merry unlocks the iron gate under the Hedge and locks it behind them.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>2 &middot; The Glade</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">The path to the Bonfire Glade seems to have moved, but the glade is found.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>3 &middot; The hilltop</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">From a bare green hill they see the fog over the Withywindle, the part they mean to avoid.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>4 &middot; The turn north</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">They leave a path that bends toward the river and try to go north.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>5 &middot; The folds</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Hollows and thickets give way only to the right and downhill.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>6 &middot; The gully</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">A steep stream-bed takes them down to the valley they wished to miss.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>7 &middot; The willows</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">They follow a path along the river and find the great grey willow.</div></div>
+            </div>
+        </div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The hobbits have crossed a boundary from the Shire, where paths go where travelers want them to go, to a country where paths are made by something else. Pippin asks who made the track along the river and why, and Merry has no answer. The question is left to hang: someone or something has laid brushwood across the rills, and the track is not there for the visitors&rsquo; benefit.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE WILLOW</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Old Man Willow does not attack. He sings. The afternoon is hot and the flies are loud, and then the flies fall quiet and a murmur in the branches begins to suggest water and sleep. Merry says he must have a nap. Pippin falls on his knees. Frodo notices that the others are past caring, and then he feels the same weight settle on his own eyes. Sam alone has the sense to say that something more than sun and warm air is at work.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The trap closes quietly. Frodo drifts down to a root and paddles his feet, and the root tips him into the water. Merry and Pippin lie against the trunk, and the cracks in the willow close around them with a click like a lock. Sam hauls Frodo out and then tries to burn the willow open, which makes the tree angrier. Frodo runs along the path crying for help, and a song answers from behind him.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Tom Bombadil explains the Willow&rsquo;s grudge later, and it matches the Forest&rsquo;s other grievance. The oldest trees remember when they were lords, and their hearts are filled with <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">a hatred of things that go free upon the earth</q> (Book I, Chapter 7). Tom names the Willow as the most dangerous of them, rotten at heart and cunning. He does not chase the hobbits. He lets the comfortable afternoon do the work.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="3" data-fb="Right. The attack on the Hedge and the burning are given as causes, and Tom later says the old trees hate those who go free and cut and burn. The grievance has a record." data-hint="Reread Merry&rsquo;s account of the Hedge and the bonfire. Ask whether he describes a cause or only a fact, and whether he rejects every story about the Forest.">
+                <div class="widget-row-prompt">1. Merry explains that hobbits once burned a strip of the Forest. What does the account show about the trees&rsquo; attitude?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The trees are simply wicked and have hated every living thing from the start.</button>
+                    <button data-choice="1">The trees are a hobbit superstition, and Merry rejects the stories outright.</button>
+                    <button data-choice="2">The trees fear the hobbits and are trying to hide from them in the dark.</button>
+                    <button data-choice="3">The trees&rsquo; hostility has a history, and they have not forgotten it.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Correct. Sam says there is more behind the sleepiness than sun and warm air. The comfort is part of the willow&rsquo;s method." data-hint="Look at what Sam says about the sleepiness and at when the cracks close. Ask whether the comfort comes first by chance or as part of the attack.">
+                <div class="widget-row-prompt">2. The willow&rsquo;s trap begins with sleepiness and singing. What does the order of events suggest?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The willow is too weak to act until its victims are asleep and cannot resist.</button>
+                    <button data-choice="1">The danger arrives as comfort, so the travelers lower their guard first.</button>
+                    <button data-choice="2">The sleepiness is only the afternoon heat, and the tree acts at random whenever it can.</button>
+                    <button data-choice="3">The flies drug the hobbits, and the willow happens to be standing nearby at the time.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Frodo wonders whether he was right to bring his friends into the wood, and the evening shows what it cost. The Forest was not a neutral road." data-hint="Reread the paragraph where Frodo doubts the choice. Ask whether the Forest is neutral ground or has aims of its own.">
+                <div class="widget-row-prompt">3. Frodo chose the Forest to avoid the Riders. What does the day show about the plan?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Avoiding one danger can lead into another, since the Forest has purposes of its own.</button>
+                    <button data-choice="1">The plan was sound, and the Forest only meant to hold them until the Riders had passed.</button>
+                    <button data-choice="2">The plan failed only because Merry carelessly lost the path.</button>
+                    <button data-choice="3">The plan shows that Frodo has no sense of danger at all.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>hostile</strong>: unfriendly, or acting as an enemy.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>grievance</strong>: a wrong that someone has not forgotten.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Hedge</strong>: the tall boundary hedge between Buckland and the Forest.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>hospitality</strong>: the welcome given to guests; the Forest has none to give.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 3 &middot; The Old Forest</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

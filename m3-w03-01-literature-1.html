@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.2" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A); TEKS 110.39(c)(8)(E)" />
+<title>English IV Honors &middot; The Music</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 3 &middot; Module 3: What We Become &middot; Week 3 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #1a2340;">What We Become</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Metamorphosis</div>
+        <div style="font-size: 12px; color: #1a2340;">Franz Kafka, 1915 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What makes a monster, and what makes us human?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 3</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Music</div>
+        <div style="font-size: 16px; color: #1a2340;">A violin, a lowest point, and the question Gregor puts to himself</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In his worst state, Gregor hears his sister play the violin and is drawn out of his room.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The scene tests whether being moved by beauty marks a person as human. The lesson reads Gregor’s condition at the start of Part III and then the evening of the music.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe Gregor’s condition and routine at the start of Part III.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain what Gregor’s response to the music suggests about what remains human in him.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain the irony that the longing that draws him out also exposes him.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Part III through the violin scene, ending where the middle lodger points at Gregor.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE LOWEST POINT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Part III opens with the apple still lodged in Gregor’s back, a wound no one dares to remove, and his movement much reduced. Each evening the living-room door is opened, and from the dark he watches the family in the lamplight. They are quieter than before. The father dozes in his uniform, which he has stopped taking off even at home. The mother sews for a fashion shop. Grete, now a shop assistant, studies shorthand and French at night.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The household has dismissed the maid, hired a charwoman for the rough work, and sold some of the family jewelry. Grete now pushes food into Gregor’s room with her foot on her way out and sweeps it away later, caring little whether it was eaten. Gregor has almost stopped eating. His room has become a store for whatever the family has no space for, including kitchen refuse. The charwoman looks in on him with a rough familiarity.</p>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Before the violin, what has Part III shown about Gregor’s standing in the household?</div>
+            <div class="widget-options">
+                <button data-response="Some care continues, but the details point the other way: food pushed in with a foot, a room used for storage, a charwoman who looks in on him every morning and evening.">He is cared for with growing difficulty but still treated as a family member.</button>
+                <button data-response="This fits the evidence. The household’s attention goes to earning and to the lodgers, and Gregor receives what is left.">His room and meals are managed for the family’s convenience, and he is largely set aside.</button>
+                <button data-response="Not quite. The door is still opened each evening so that he can watch, and the family’s tired conversation still turns around him.">He has been forgotten completely.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE MUSIC</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">One evening three lodgers, who rent a room in the flat, are in the living room after their meal when the sound of a violin reaches them from the kitchen. They ask that Grete play for them in the room, and the family brings out the stand and the music. The lodgers soon lose interest and withdraw to the window, smoking, with the air of men too polite to leave.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gregor has not heard Grete play in all this time. He is drawn forward until his head is in the living room, careless of the dust and scraps he carries on his body. He asks himself whether a mere animal could be affected so deeply by music. The narration answers in an image: it seems to him that a way is opening toward a food he has wanted and never named. He imagines taking Grete into his room and keeping her there by her own free will. He pictures telling her the plan he had kept secret: a place for her at the conservatory.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Appetite explains why Gregor eats. It does not explain why he leans toward a violin. The scene gives the story’s strongest evidence that a human sensibility survives in a body that is no longer human. It also marks a change in him: the narration notes that he once took pride in his consideration for others and now hardly thinks of it.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; WHO HEARS WHAT</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%;"><tr><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 16%;"></th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 28%;">The lodgers</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 28%;">The parents</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 28%;">Gregor</th></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Attention</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Alert at first, then turned toward the window.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Fixed on Grete’s hands.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Inching forward to meet her eyes.</td></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">What the music is</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">An entertainment that disappoints, endured politely.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Their daughter performing for paying guests.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">A call toward something he has been missing.</td></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Result</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">They are the ones who notice Gregor.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">They miss him entirely.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">He leaves his room and is seen.</td></tr></table></div>
+
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE LONGING THAT EXPOSES HIM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The middle lodger points at Gregor and calls out to Mr. Samsa. What follows is the next lesson’s subject. The irony is already in place: the feeling that most shows Gregor’s humanity is the one that gets him seen. The family, absorbed in the music, had not noticed him. The lodgers, bored by it, did.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The question is not an answer, but the way it is asked shows a response no animal appetite would explain." data-hint="Ask what the question treats as the difference between an animal and a person, and where Gregor finds himself on that line.">
+                <div class="widget-row-prompt">1. Gregor asks whether an animal could be so moved by music. What does the question imply?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He suspects the lodgers of playing a trick on him by asking for music.</button>
+                    <button data-choice="1">Part of him still responds as a person does, whatever his body is.</button>
+                    <button data-choice="2">He believes he is turning back into a man and will soon recover.</button>
+                    <button data-choice="3">He doubts his own sanity because he hears a violin from his room.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Correct. The narration says Grete plays beautifully; the lodgers withdraw anyway, while Gregor moves closer." data-hint="Reread what the lodgers do as the playing goes on and what Gregor does. Ask who is moved.">
+                <div class="widget-row-prompt">2. How do the lodgers’ reaction to the music and Gregor’s differ?</div>
+                <div class="widget-options">
+                    <button data-choice="0">They listen closely and enjoy it, while Gregor is indifferent to it.</button>
+                    <button data-choice="1">They enjoy it as much as Gregor does but are less open about showing it.</button>
+                    <button data-choice="2">They dislike it because Grete plays badly, and Gregor shares their view.</button>
+                    <button data-choice="3">They tire of it and drift to the window, while he is pulled toward it.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The longing that shows his humanity is the same longing that leads to his exposure." data-hint="Ask who sees him and why he came out. Then ask whether the cause and the result fit together or oppose each other.">
+                <div class="widget-row-prompt">3. What is ironic in the way Gregor is discovered?</div>
+                <div class="widget-options">
+                    <button data-choice="0">His most human response is what exposes him to the people who reject him.</button>
+                    <button data-choice="1">He is discovered by the one person in the household he had always tried hard to avoid.</button>
+                    <button data-choice="2">He is discovered because he tried to attack one of the lodgers in the living room.</button>
+                    <button data-choice="3">He is discovered by the charwoman, whom he had long since learned to ignore completely.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>sensibility</strong>: the capacity to respond to beauty and feeling.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>irony</strong>: a gap between what is expected or fitting and what happens.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 3 &middot; The Music</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

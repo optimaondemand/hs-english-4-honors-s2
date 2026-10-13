@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.2.4; ELA.12.R.3.1" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(5)(J); TEKS 110.39(c)(4)(H)" />
+<title>English IV Honors &middot; Accept What Happens</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 3 &middot; Module 3: What We Become</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #1a2340;">What We Become</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;"><em>Meditations</em></div>
+        <div style="font-size: 12px; color: #1a2340;">Marcus Aurelius, 2nd century (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 14px; color: #0e1c42;">What makes a monster, and what makes us human?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 6</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Accept What Happens</div>
+        <div style="font-size: 16px; color: #1a2340;">Acceptance, the physician&rsquo;s prescription, and the limit of resignation</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Marcus&rsquo;s hardest advice is to accept what happens, and he supports it with two images.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The images are a physician&rsquo;s prescription and a rock in the sea. Four passages are read: the prescription, the promontory, the reminder that life is short, and a short rule that limits the acceptance. Together they allow a reader to weigh whether it is wisdom or resignation.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain Marcus&rsquo;s comparison of what happens to a physician&rsquo;s prescription.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe the limit Marcus sets on acceptance.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can weigh Marcus&rsquo;s acceptance against Gregor&rsquo;s and against Emerson&rsquo;s self-trust.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read the passages below from <em>Meditations</em> (Books V, IV, VIII, and IX). Full text: <a href="https://www.gutenberg.org/ebooks/2680" style="color:#3B4E8C;">Gutenberg eBook #2680</a>.</div>
+        </div>
+
+    </div>
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128218; HISTORICAL CONTEXT</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">The Stoics held that events follow from a rational order, so what happens to a person fits into a larger design. The translation names this order variously as &ldquo;the fates,&rdquo; &ldquo;the nature of the universe,&rdquo; and &ldquo;the common nature.&rdquo; The argument for acceptance depends on trust in that order, and a reader can test it without sharing the trust.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PRESCRIPTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Marcus compares what happens to a person with a physician&rsquo;s orders. A physician prescribes riding to one patient, cold baths to another, and walking barefoot to a third. In the same way, he says, the nature of the universe prescribes sickness, blindness, or loss.</p>
+        <blockquote class="pd-quote" data-src="marcus" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;As we say commonly, The physician hath prescribed unto this man, riding; unto another, cold baths; unto a third, to go barefoot: so it is alike to say, The nature of the universe hath prescribed unto this man sickness, or blindness, or some loss, or damage or some such thing. ... These therefore let us accept of in like manner, as we do those that are prescribed unto us our physicians. For them also in themselves shall We find to contain many harsh things, but we nevertheless, in hope of health, and recovery, accept of them. ... Accept then, and be pleased with whatsoever doth happen, though otherwise harsh and un-pleasing, as tending to that end, to the health and welfare of the universe&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Marcus Aurelius, <em>Meditations</em> (2nd century; Meric Casaubon&rsquo;s 1634 translation; public domain), Book V</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The analogy has three steps. Patients accept bitter treatment &ldquo;<span class="pd-quote" data-src="marcus">in hope of health</span>.&rdquo; The universe is a whole whose health matters more than any part&rsquo;s comfort. So a part should accept what its prescription requires. The argument holds if the whole is ordered for good. A reader who doubts that can still note what the image does: it turns hardship from an insult into an instruction.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which reading of the prescription image seems closest on a first pass?</div>
+            <div class="widget-options">
+                <button data-response="This follows the text: &ldquo;in hope of health, and recovery, accept of them.&rdquo; The weak point is that it assumes the order is good for the whole, which the passage states and does not prove.">Hardship is a medicine from an order aimed at health.</button>
+                <button data-response="Marcus does say this elsewhere, but the prescription image adds more: the harsh thing is meant to serve health, not only to be endured.">Hardship cannot be avoided, so complaint wastes effort.</button>
+                <button data-response="The passage points the other way. The patient accepts the treatment, and Marcus asks to &ldquo;be pleased&rdquo; with what happens, which is more than resisting it.">Hardship is a test that a person should resist.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE PROMONTORY AND THE SHORT LIFE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two more passages supply the manner of the acceptance. The first is the rock in the sea. The waves beat on it continually, and it stands; around it the waves are &ldquo;<span class="pd-quote" data-src="marcus">stilled and quieted</span>.&rdquo; The next section turns a complaint into a statement. Marcus replaces &ldquo;<span class="pd-quote" data-src="marcus">Oh, wretched I</span>&rdquo; with &ldquo;<span class="pd-quote" data-src="marcus">nay, happy I</span>,&rdquo; because he can continue without grief.</p>
+        <blockquote class="pd-quote" data-src="marcus" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Thou must be like a promontory of the sea, against which though the waves beat continually, yet it both itself stands, and about it are those swelling waves stilled and quieted. ... Oh, wretched I, to whom this mischance is happened! nay, happy I, to whom this thing being happened, I can continue without grief; neither wounded by that which is present, nor in fear of that which is to come. For as for this, it might have happened unto any man, but any man having such a thing befallen him, could not have continued without grief.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Marcus Aurelius, <em>Meditations</em> (2nd century; Meric Casaubon&rsquo;s 1634 translation; public domain), Book IV</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second passage keeps death in view. Within a short time a person is ashes or a skeleton and perhaps a name, and then &ldquo;<span class="pd-quote" data-src="marcus">an empty sound, and a rebounding echo</span>.&rdquo; The effect is to reduce the weight of fame and of the things &ldquo;<span class="pd-quote" data-src="marcus">dearest unto us</span>.&rdquo;</p>
+        <blockquote class="pd-quote" data-src="marcus" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Within a very little while, thou wilt be either ashes, or a sceletum; and a name perchance; and perchance, not so much as a name. And what is that but an empty sound, and a rebounding echo? Those things which in this life are dearest unto us, and of most account, they are in themselves but vain, putrid, contemptible. The most weighty and serious, if rightly esteemed, but as puppies, biting one another: or untoward children, now laughing and then crying. As for faith, and modesty, and justice, and truth, they long since, as one of the poets hath it, have abandoned this spacious earth, and retired themselves unto heaven.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Marcus Aurelius, <em>Meditations</em> (2nd century; Meric Casaubon&rsquo;s 1634 translation; public domain), Book V</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Taken together, the passages describe acceptance as steadiness, not passivity. The rock does not flee the sea or pretend it is calm. It holds its place, and the brevity of life sets its priorities. Marcus&rsquo;s own answer to what keeps a person in the world, in the passage on what is in a person&rsquo;s power, is to &ldquo;<span class="pd-quote" data-src="marcus">do good unto men</span>.&rdquo;</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WISDOM OR RESIGNATION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The acceptance has a boundary built into it. In Book VIII Marcus gives a rule, and in Book IX he gives its companion for the case where a person cannot change another person.</p>
+        <blockquote class="pd-quote" data-src="marcus" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Thou must therefore blame nobody, but if it be in thy power, redress what is amiss; if it be not, to what end is it to complain? For nothing should be done but to some certain end. ... Either teach them better if it be in thy power; or if it be not, remember that for this use, to bear with them patiently, was mildness and goodness granted unto thee.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Marcus Aurelius, <em>Meditations</em> (2nd century; Meric Casaubon&rsquo;s 1634 translation; public domain), Books VIII and IX</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The rule sends the reader back to the line Marcus draws between what is and is not in a person&rsquo;s power. What is in a person&rsquo;s power calls for action: &ldquo;<span class="pd-quote" data-src="marcus">redress what is amiss</span>.&rdquo; What is not calls for patience. Whether the line is drawn in the right place is the question a reader has to settle, and it separates wisdom from resignation. Accepting a flood and accepting an injustice are different acts under this rule.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; MARCUS&rsquo;S RULE APPLIED</div>
+            <div style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; min-width: 520px;"><thead><tr><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">Case</th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">In someone&rsquo;s power to change?</th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">What the rule asks</th></tr></thead><tbody><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF; font-weight: bold; color:#0e1c42;">Illness or loss, the prescription cases</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">no, not by the person who suffers it</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">accept, like the rock in the sea</td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8; font-weight: bold; color:#0e1c42;">A neighbor&rsquo;s fault, Book IX</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">in part: <span class="pd-quote" data-src="marcus">Either teach them better if it be in thy power</span></td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">teach if possible; otherwise bear patiently</td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF; font-weight: bold; color:#0e1c42;">The Samsa household&rsquo;s treatment of Gregor</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">yes, by the household, which holds the door, the food, and the decision</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">action by those who can act; acceptance does not fit</td></tr></tbody></table></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The last row is the point for this module. Gregor accepts how the household treats him: he hides, he adjusts to what the household allows, and by the end he agrees with their verdict. By Marcus&rsquo;s rule the treatment lay within the household&rsquo;s power, so it called for repair, not acceptance. Emerson also counsels acceptance: &ldquo;<span class="pd-quote" data-src="emerson">Accept the place the divine providence has found for you</span>.&rdquo; Emerson&rsquo;s acceptance is of one&rsquo;s own time and place, and it sits beside the demand to trust oneself.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. The first half of the sentence calls for repair of what is within power. Acceptance covers only what is not." data-hint="Read both halves of the sentence. The first half sets a duty, and the second applies only if the first cannot be done.">
+                <div class="widget-row-prompt">1. Marcus writes: &ldquo;if it be in thy power, redress what is amiss; if it be not, to what end is it to complain?&rdquo; What does this show about the acceptance he teaches?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It applies to everything that happens, whoever causes it.</button>
+                    <button data-choice="1">It forbids complaint in every case.</button>
+                    <button data-choice="2">It replaces action with patience.</button>
+                    <button data-choice="3">It is limited to what lies beyond a person&rsquo;s power, so action is still required elsewhere.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Correct. The waves beat &lsquo;continually&rsquo; and the rock stands, with the waves about it &lsquo;stilled and quieted.&rsquo; The image describes endurance, not the end of the waves." data-hint="Notice that the waves keep beating. The image does not say they stop. Ask what the rock does and what changes around it.">
+                <div class="widget-row-prompt">2. The promontory &ldquo;stands&rdquo; while the waves beat on it. Which reading does the image support best?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Misfortune ends once a person refuses to react to it.</button>
+                    <button data-choice="1">The rock is untouched because it feels nothing, which is the ideal.</button>
+                    <button data-choice="2">A person should withdraw from the sea of events altogether.</button>
+                    <button data-choice="3">Steady endurance holds the self in place and calms what surrounds it.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The rule makes acceptance depend on what lies beyond a person&rsquo;s power. The household held the door and the decision, so the rule asks them to redress." data-hint="Apply the rule to the household, not to Gregor. Ask what was in their power and what the rule says about that.">
+                <div class="widget-row-prompt">3. By Marcus&rsquo;s rule, how should the household&rsquo;s treatment of Gregor be judged?</div>
+                <div class="widget-options">
+                    <button data-choice="0">As acceptable, since fate prescribes misfortune to each person.</button>
+                    <button data-choice="1">As within the household&rsquo;s power to change, so it called for action, not acceptance.</button>
+                    <button data-choice="2">As Gregor&rsquo;s own failure to govern his judgments.</button>
+                    <button data-choice="3">As irrelevant, since only a person&rsquo;s own mind matters.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>prescription</strong>: an order for treatment given by an authority, here by a physician or by nature.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>promontory</strong>: a high point of land that juts into the sea.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>redress</strong>: to set right what is wrong.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>resignation</strong>: acceptance without the will to change what could be changed.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 6 &middot; Accept What Happens</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

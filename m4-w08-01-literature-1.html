@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A)" />
+<title>English IV Honors &middot; The Gifts and the River</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 8</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Gifts and the River</div>
+        <div style="font-size: 16px; color: #1a2340;">The leaving of Lórien, the gifts, and the divided counsel on the Great River.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Hospitality ends in gifts, and the gifts leave the choice open.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Lothlórien sends the Company away with objects fitted to each member, and the river carries them toward a decision no one wants to make. The chapters show a Company that is still together and already divided in counsel.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how the gifts of Lothlórien fit the people who receive them.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe the divided counsel about the road and who holds each view.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can trace how the river journey raises the pressure toward a choice.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book II, Chapter 8, Farewell to Lórien, and Chapter 9, The Great River, in your copy.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE LAST COUNSEL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On the last night Celeborn tells the Company that those who wish to turn back may stay for a while, and Galadriel observes that all have resolved to go forward. Boromir states his own course: it lies onward, toward Minas Tirith. Celeborn asks whether the whole Company is bound for Minas Tirith, and Aragorn answers that the course is undecided.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Celeborn then puts the choice in terms of the river. The way to Minas Tirith lies on the western shore, and the straight road of the quest lies on the eastern. He offers boats and names who can handle them, and the offer postpones the decision for some days. Aragorn is relieved.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Later the Company debates in its pavilion and reaches no conclusion. Most want to go first to Minas Tirith. Aragorn is divided between his own plan to go with Boromir to Gondor and the burden left to him by Gandalf, and Frodo says nothing. Boromir argues that it is folly to enter Mordor without force, and then he stops himself in mid-thought:</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;"><q class="cr-quote" data-src="tolkien">It would be folly to throw lives away, I mean</q>. Frodo notices that the corrected sentence does not match the thought that came first, and he wonders what Boromir meant to say he should not throw away.</p>
+
+    </div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which gift looks best matched to the person who receives it?</div>
+            <div class="widget-options">
+                <button data-response="The earth is for a gardener and points to his home. Galadriel ties its worth to Sam reaching home again, and not to the road.">Sam&rsquo;s box of earth from Galadriel&rsquo;s orchard.</button>
+                <button data-response="These mark who Aragorn is and what he may become. Galadriel gives him a name that was foretold, and the gift speaks to identity and hope more than to supply.">Aragorn&rsquo;s sheath and the Elfstone.</button>
+                <button data-response="The gift answers a request made with great courtesy. Gimli asks for one strand and receives three, and the exchange repairs an old distrust between Elves and Dwarves.">Gimli&rsquo;s three golden hairs.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE GIFTS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the morning the Elves bring practical gifts for the whole Company: thin cakes of waybread that strengthen a traveller for a day, cloaks that blend with leaf and stone, and strong light ropes. The cloaks are not magic. The leader of the Elves says they are <q class="cr-quote" data-src="tolkien">garments, not armour</q>, but they help their wearers keep out of unfriendly eyes. Three grey boats wait at the landing.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">At the parting feast on the river Galadriel gives each member a personal gift. The gifts fit the person, and except for Legolas&rsquo;s bow they are tokens, not weapons against the road.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 18px 20px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#127873; THE GIFTS OF GALADRIEL AND CELEBORN</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; min-width: 560px;">
+<tr><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Recipient</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Gift</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">What it fits</th></tr>
+<tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Aragorn</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">A sheath for his sword, and a green stone with the name Elessar</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">His lineage and the future that is foretold for him</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Boromir</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A belt of gold</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A Man of rank from a realm with a long line of captains</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Merry and Pippin</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Small silver belts with golden flower clasps</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Hobbits of the Shire, honoured with a plain and fitting token</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Legolas</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A bow of the Galadhrim and a quiver</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">An archer of the Wood, given a better bow</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Sam</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">A small box of earth from her orchard</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">A gardener, with a promise tied to getting home</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Gimli</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Three strands of her golden hair</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A request made with courtesy, answered beyond what he asked</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Frodo</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">A crystal phial holding the light of Eärendil&rsquo;s star</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The Ring-bearer, given light for dark places</td></tr>
+            </table></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Galadriel is exact about what the gifts cannot do. Of Sam&rsquo;s box she says <q class="cr-quote" data-src="tolkien">It will not keep you on your road, nor defend you against any peril</q>, and she adds that it may reward him if he sees his home again. The gifts honour and sustain. They do not make the choice for the traveller.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE PARTING AND THE RIVER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Company sails away down the Silverlode into the Great River, and Galadriel stands alone on the bank. Gimli weeps and says to Legolas that he has seen the last of what was fairest. He admits that the danger he feared was torment in the dark, and then adds a harder confession: <q class="cr-quote" data-src="tolkien">I would not have come, had I known the danger of light and joy.</q> Legolas counts him blessed, since he chose this loss freely and has not forsaken his companions. Gimli answers that memory is a poor comfort, only a mirror of the thing.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chapter 9 describes the voyage as drift. The Company lets the current carry it, because the decision at Rauros is still some days off and no one hurries toward it. Aragorn insists on early starts and late stops, because he fears the Dark Lord has not been idle. The lands change from woods to the Brown Lands to the stony hills of the Emyn Muil, and the mood falls with them.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Strains show on the boats. Boromir mutters, bites his nails, and looks long at Frodo. Sam sees a log with eyes. Aragorn confirms that it is Gollum, who has followed since Moria, and calls him <q class="cr-quote" data-src="tolkien">our little footpad</q>. At Sarn Gebir the Company, drifting at night, narrowly misses the rapids. Orcs shoot from the eastern bank, and Frodo&rsquo;s mail turns an arrow. A winged shape comes out of the south and Legolas brings it down with the bow of Lórien. Frodo says only that <q class="cr-quote" data-src="tolkien">It was something colder.</q></p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE ROAD DIVIDES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next day Boromir argues that the Company should abandon the boats at the Emyn Muil and go west toward his own country. Aragorn will not give up the river, which cannot be missed, and he wishes to stand on the high seat of Amon Hen before he chooses. Boromir yields when it is clear that Frodo will follow Aragorn, and says he will go with them as far as the tall isle and then turn home. His reason is a point of honour: <q class="cr-quote" data-src="tolkien">It is not the way of the Men of Minas Tirith to desert their friends at need</q>.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Company carries the boats around the rapids along an old portage-way and passes between the great stone kings of the Argonath. Frodo sees Aragorn change: <q class="cr-quote" data-src="tolkien">Strider, and yet not Strider</q>. The ranger speaks as an heir returning to his own land, and then falls into doubt: <q class="cr-quote" data-src="tolkien">But whither now shall I go?</q></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The chapter ends on the lake of Nen Hithoel at the foot of Tol Brandir. The narrator states the situation plainly: <q class="cr-quote" data-src="tolkien">They could go no further without choice between the east-way and the west.</q></p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. Galadriel says what the gift does and what it does not do. The cloaks and the phial also help without choosing for the wearer." data-hint="Reread her whole sentence about the box. Then ask which option says the gifts honour a person without settling the road.">
+                <div class="widget-row-prompt">1. Galadriel tells Sam that his box will not keep him on his road or defend him against any peril. What does this say about the Elves&rsquo; gifts?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The gifts are honoured but weak next to the dangers ahead.</button>
+                    <button data-choice="1">The gifts sustain and remind, and leave the choice and the danger with the traveller.</button>
+                    <button data-choice="2">The gifts are traps that will weigh down the Company on the road.</button>
+                    <button data-choice="3">Only Sam&rsquo;s gift is ordinary, and the rest were made to defend against peril.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="2" data-fb="Correct. The text says plainly that his thought was different from his final words, and that the unspoken object might be the Ring." data-hint="Look at what Frodo asks himself right after the correction: it would be folly to throw away what? Pick the option that follows that question.">
+                <div class="widget-row-prompt">2. Boromir corrects himself from &ldquo;throw away&rdquo; to &ldquo;throw lives away&rdquo;. What does Frodo notice?</div>
+                <div class="widget-options">
+                    <button data-choice="0">That Boromir is tired and loses his words.</button>
+                    <button data-choice="1">That Boromir wants to turn back to Gondor at once.</button>
+                    <button data-choice="2">That Boromir&rsquo;s thought differs from his corrected words and may point to the Ring.</button>
+                    <button data-choice="3">That Boromir doubts Aragorn&rsquo;s right to lead.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Right. He sets the torment he expected against the loss of something beautiful, and says the loss is the worse wound." data-hint="He names two dangers, one he feared and one he did not expect. Ask which of them he calls his worst wound, and why.">
+                <div class="widget-row-prompt">3. Gimli says he would not have come had he known the danger of light and joy. Which reading is best supported?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He regrets the quest because of the fighting in Moria.</button>
+                    <button data-choice="1">He regrets that Lothlórien made him a friend of the Elves.</button>
+                    <button data-choice="2">He blames Galadriel for giving him a gift he did not ask for.</button>
+                    <button data-choice="3">He finds that what is lovely can wound more deeply than what is fearful once it is lost.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>counsel</strong>: advice, or a joint decision about what to do.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>portage</strong>: the carrying of boats and goods overland between waters.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>token</strong>: a small object that stands for a person, a bond, or a hope.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 8 &middot; The Gifts and the River</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

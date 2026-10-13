@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.2" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A)" />
+<title>English IV Honors &middot; Leaving Home</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring &middot; Week 2 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Leaving Home</div>
+        <div style="font-size: 16px; color: #1a2340;">Literature &middot; Week 2</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Frodo leaves Bag End before he understands the task, and the chapter lets that fact stand.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Chapter 2 he agreed to keep the Ring and to go. Chapter 3 shows what the agreement costs in practice: a house sold, a cover story told, a destination he does not have, and a guide who does not arrive.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how Frodo prepares his departure and what the preparations show about him.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can compare Bilbo&rsquo;s leaving with Frodo&rsquo;s, using specific differences.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how the chapter presents a duty accepted before it is understood.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book I, Chapter 3, &ldquo;Three Is Company&rdquo;, in your copy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Look again at Sam&rsquo;s words at breakfast in Chapter 4, after the night with the Elves.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SELLING BAG END</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gandalf tells Frodo to go quietly and soon. Frodo delays for weeks. He wants one more summer in the Shire, and he fixes his departure for his fiftieth birthday, the day that fits best with following Bilbo. Nearly all of the preparation is a matter of concealment. He sells Bag End to the Sackville-Bagginses, buys a small house at Crickhollow in Buckland with Merry&rsquo;s help, and lets the district believe that his money is running out and that he is moving back to his mother&rsquo;s people. Of his friends, only Sam is told the real plan.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The cover story works because it uses the Shire&rsquo;s own gossip. Hobbiton already believes that Bag End is full of treasure and that Gandalf is behind every oddity, so a sale at a bargain price is easy to explain in either direction. The Shire, which sees only what it expects, supplies its own camouflage.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Frodo asks what he is supposed to do, his words mark the difference from Bilbo&rsquo;s journey:</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">Bilbo went to find a treasure, there and back again; but I go to lose one, and not return, as far as I can see.</q> (Book I, Chapter 3)</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Gandalf does not correct the picture. He answers that Frodo <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">cannot see very far</q> (Book I, Chapter 3) and that neither can he. The wizard offers a direction, toward Rivendell and toward danger but not too rashly, and not a plan. Then he leaves the Shire to gather news and fails to return in time. Frodo sets out on foot, at night, with Pippin and Sam, and gives the key to Sam at the door.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Frodo says Bilbo went to find a treasure and that he goes to lose one. What is the difference in kind between the two journeys?</div>
+            <div class="widget-options">
+                <button data-response="This is the main contrast. Bilbo set out to gain something and expected to come home. Frodo expects to give something up, and he does not expect to return.">Bilbo&rsquo;s journey had a prize at the end; Frodo&rsquo;s has only a loss and a duty.</button>
+                <button data-response="Partly true, since Frodo is pursued. It misses Frodo&rsquo;s stated reason in Chapter 2, which is to save the Shire by taking the danger away from it.">Bilbo traveled for pleasure; Frodo travels only for his own safety.</button>
+                <button data-response="Closer to the text than it first looks, since Frodo admits he has no clear destination. But Bilbo also left Bag End with little idea of what lay ahead, and the difference lies in what each expects at the end of it.">Bilbo knew his road; Frodo has no map and no plan at all.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; TWO DEPARTURES, SIDE BY SIDE</div>
+            <div style="overflow-x:auto;"><table style="border-collapse:collapse; width:100%;"><tr><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:8px 10px; border:1px solid #0E1C42;"></th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:8px 10px; border:1px solid #0E1C42;">Bilbo, Chapter 1</th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:8px 10px; border:1px solid #0E1C42;">Frodo, Chapter 3</th></tr><tr><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">How he leaves</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">By a party, a speech, and a vanishing trick before a hundred guests</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">By a sale, a cover story, and a walk at night through back fields</td></tr><tr><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">Who goes with him</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">Three dwarves, packed and waiting</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">Two hobbit friends, only one of whom knows the real purpose</td></tr><tr><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">What he is after</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">Mountains, rest, and a place to finish his book</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">Safety for the Shire; a road with no clear end</td></tr><tr><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">His mood</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">Delighted to be off, sure that it is fun</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#EEF1F8; vertical-align:top;">Reluctant, wishing the departure were not necessary</td></tr><tr><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">The song on the road</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">He sings of the Road and of following it with eager feet</td><td style="font-size:15px; color:#1a2340; line-height:1.5; padding:8px 10px; border:1px solid #D0D9E8; background:#FFFFFF; vertical-align:top;">Frodo says nearly the same verse, with weary feet</td></tr></table></div>
+        </div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The last row of the table repays a second look. The verse about the Road returns in Chapter 3 with one word changed. In Chapter 1 Bilbo sings it as he steps into the dark, and the word is <em>eager</em>. In Chapter 3 Frodo says it to himself on the hill above the Woody End, and the word is <em>weary</em>. Frodo is not sure whether the verse is a memory or a thing he is making up, and Pippin finds it discouraging. A single adjective carries the difference between a holiday and a task.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Frodo&rsquo;s memory of Bilbo&rsquo;s advice about the Road adds to this. Bilbo used to say that the Road is like a river with its springs at every doorstep, and that a hobbit who steps onto it without keeping his feet may be carried anywhere. The picture suits Frodo&rsquo;s situation: he has stepped in, and he does not control where it leads.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. The text allows that Frodo is half remembering, but the specific word fits his state: he is reluctant and tired. Bilbo left with delight; Frodo leaves with duty." data-hint="The text does say Frodo may be half remembering the verse. Ask why the word that changed is the one that changed, and compare the two speakers&rsquo; moods when they say it.">
+                <div class="widget-row-prompt">1. The verse about the Road appears in Chapter 1 with &ldquo;eager feet&rdquo; and in Chapter 3 with &ldquo;weary feet&rdquo;. What does the change signal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It is only a slip, since Frodo half remembers a verse he once heard Bilbo say.</button>
+                    <button data-choice="1">It shows that the same road now feels like a burden, not an invitation.</button>
+                    <button data-choice="2">It shows that Frodo is mocking Bilbo for singing so cheerfully about leaving.</button>
+                    <button data-choice="3">It shows that the road is shorter than Bilbo thought, so no one is eager.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="2" data-fb="Correct. The wizard does not claim a map. Frodo agrees to a road whose end neither of them can name, which is the sense in which the duty is accepted before it is understood." data-hint="Reread Gandalf&rsquo;s reply to Frodo&rsquo;s question about the quest. Ask whether he claims knowledge of the end of the road or admits he does not have it.">
+                <div class="widget-row-prompt">2. Gandalf tells Frodo that neither of them can see very far. What does the admission do?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows that Gandalf doubts Frodo has the strength to finish the whole journey.</button>
+                    <button data-choice="1">It shows that Gandalf has changed his mind and now wants Frodo to stay home.</button>
+                    <button data-choice="2">It shows that the quest has no known shape, so Frodo goes on trust.</button>
+                    <button data-choice="3">It shows that Gandalf invented the quest to get Frodo out of the Shire.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Right. The earlier lesson found a peace that rested on unseen watchers. Gildor adds that the outside is not an illusion to be ignored and that fences do not last." data-hint="Reread Gildor&rsquo;s reply in the elf-camp scene. Ask whether he threatens, frees, or reminds, and what he says about who held the land before the hobbits.">
+                <div class="widget-row-prompt">3. Gildor tells the hobbits they can fence themselves in but cannot fence the world out for ever. How does this connect with the earlier lesson on the cave?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It says the Shire&rsquo;s laws will keep the outside world out while hobbits obey them.</button>
+                    <button data-choice="1">It says the Elves see the hobbits as prisoners who ought to be set free.</button>
+                    <button data-choice="2">It says the Shire is not the hobbits&rsquo; own land, so Frodo is only a guest there.</button>
+                    <button data-choice="3">It marks the Shire&rsquo;s limit: the outside world is real and will not stay out.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A CALL ACCEPTED BEFORE IT IS UNDERSTOOD</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frodo is not the only one who sets out before understanding. When Frodo tells Sam in Chapter 4 that the journey may be a one-way trip, Sam says that after the night with the Elves he feels something different. He does not know what he wants, he says, but <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">I have something to do before the end, and it lies ahead, not in the Shire.</q> (Book I, Chapter 4) This is not a reason Sam could have given a week before. It is a pull he cannot name and does not question.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Elves do not dispel the uncertainty. Gildor admits he does not know why the Enemy pursues Frodo, and he says the choice to go or to wait is Frodo&rsquo;s. When Frodo asks where he will find courage, Gildor answers briefly: <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">Courage is found in unlikely places</q> (Book I, Chapter 3). The answer neither flatters Frodo nor promises that he has the thing he needs.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The pattern is the one the module will follow. A call comes to ordinary people, and it comes without a clear aim, a map, or a promise. What the chapter shows in answer is a series of small acts: a key handed over, a gate closed, a farewell to dark windows. The call is accepted one step at a time, before it is understood.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>cover story</strong>: a false account given to hide a real purpose.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>quest</strong>: a journey with a purpose; Bilbo&rsquo;s was for a treasure, Frodo&rsquo;s is to be rid of one.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>counsel</strong>: advice offered by someone who leaves the decision to the person advised.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>duty</strong>: a task a person is bound to by role, promise or conscience, whether or not it was sought.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 2 &middot; Leaving Home</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

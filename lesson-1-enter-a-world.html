@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English IV Honors &mdash; Lesson 1: Enter a World</title>
+<link rel="stylesheet" href="itw.css" />
+</head>
+<body data-lesson="L1" data-title="Lesson 1: Enter a World" data-assignment="Assignment 1">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH IV HONORS</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Honors Project</div><div class="strip-v">Into the World</div><div class="strip-s">Spring semester</div></div>
+  <div class="strip-cell"><div class="strip-k">Lesson</div><div class="strip-v">1 of 8 &middot; Enter a World</div><div class="strip-s">Q3, Weeks 1 to 2</div></div>
+  <div class="strip-cell"><div class="strip-k">You choose</div><div class="strip-v">A world, a role, an audience</div><div class="strip-s">About 45 minutes</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v">Your PDF</div><div class="strip-s">Assignment 1 in Canvas</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="hero">
+    <img src="img/world-athens.jpg" alt="The Parthenon at dusk, painted by Frederic Edwin Church in 1871" />
+    <div class="hero-cap"><b>Enter a World</b>Every book you read this year came out of a real place where people were arguing. This spring you join one of those arguments.<span class="hero-credit">Frederic Edwin Church, The Parthenon, 1871. Oil on canvas. The Metropolitan Museum of Art, New York, 15.30.67. Public domain.</span></div>
+  </div>
+  <div class="path">
+    <div class="path-title">TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">Meet the project</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Meet ten worlds</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Choose one</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Decide who you are there</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Decide who you are talking to</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Download your PDF</span>
+    </div>
+  </div>
+  <div class="q plain" style="max-width:380px;"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="LastName" /></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="project"><span class="tab-n">1</span>The project</button>
+  <button class="tab-btn" data-tab="worlds"><span class="tab-n">2</span>Ten worlds</button>
+  <button class="tab-btn" data-tab="choose"><span class="tab-n">3</span>Your world</button>
+  <button class="tab-btn" data-tab="role"><span class="tab-n">4</span>Your role</button>
+  <button class="tab-btn" data-tab="audience"><span class="tab-n">5</span>Your audience</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">6</span>Your PDF</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ============ 1 · THE PROJECT ============ -->
+<div class="tab-panel" id="tab-project">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">Into the World</div><div class="activity-sub">Your honors project for the spring</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>You step into one world from a book you read this year. You take a public role there and work all spring to move a real audience toward something you can defend as wise. At the end you deliver the work to that audience and turn in a portfolio that shows how you built it.</div></div>
+      <div class="flow">
+        <div class="flow-step now"><div class="flow-n">1</div><div class="flow-t">A world</div><div class="flow-d">A place and time from this year's books, where people disagree</div><div class="flow-when">TODAY</div></div>
+        <div class="flow-step now"><div class="flow-n">2</div><div class="flow-t">A role</div><div class="flow-d">Someone people listen to</div><div class="flow-when">TODAY</div></div>
+        <div class="flow-step now"><div class="flow-n">3</div><div class="flow-t">An audience</div><div class="flow-d">Real people who could be moved</div><div class="flow-when">TODAY</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">A goal</div><div class="flow-d">What they should do, and why it is wise</div><div class="flow-when">LESSON 2</div></div>
+        <div class="flow-step"><div class="flow-n">5</div><div class="flow-t">A medium</div><div class="flow-d">Vlog, podcast, feature article, imitation, or the Address</div><div class="flow-when">LESSON 2</div></div>
+      </div>
+      <div class="flow-end"><div class="fe-k">LESSON 8</div><div class="fe-t"><strong style="color:#fff;">The Portfolio.</strong> Your finished work, delivered to your audience, with the research, the letter, and the logs behind it.</div></div>
+    </div>
+  </div>
+
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">What you will be able to do</div><div class="activity-sub">The four parts of your portfolio grade</div></div></div>
+    <div class="activity-body">
+      <div class="goals">
+        <div class="goal"><div class="goal-w"><b>25</b><span>points</span></div><div class="goal-b"><div class="goal-t">FIT</div><div class="goal-d">Choose a speaker, an audience, a goal, and a medium that work together, and answer what your audience already believes.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>30</b><span>points</span></div><div class="goal-b"><div class="goal-t">ARGUMENT</div><div class="goal-d">Argue that your goal serves wisdom and human flourishing, using a framework from this year, and state the strongest objection fairly.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>25</b><span>points</span></div><div class="goal-b"><div class="goal-t">RESEARCH</div><div class="goal-d">Research your world in primary sources and scholarship, write to a real expert, and say plainly what is documented and what you invented.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>20</b><span>points</span></div><div class="goal-b"><div class="goal-t">CRAFT</div><div class="goal-d">Make and deliver a finished work in a public form, with a look and sound drawn from the world itself.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Who it is for</div><div class="activity-sub">The one rule of the project</div></div></div>
+    <div class="activity-body">
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Who is your work written for?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="Your teacher reads it and grades it. You never write to your teacher.">My teacher</button>
+            <button class="opt" data-correct="true" data-fb="Yes. A real group you name, in the world you choose.">The audience I choose</button>
+            <button class="opt" data-correct="false" data-fb="Too wide. Everyone cannot be moved. A named group can.">Anyone who finds it</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q"><div class="q-prompt">In your own words, what will you make this spring?<div class="q-hint">Two sentences. You have not chosen a world yet. Describe the project.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="projectOwnWords" data-label="The project in my own words" data-required placeholder="This spring I will..."></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="worlds">Meet ten worlds &#8594;</button>
+</div>
+
+<!-- ============ 2 · TEN WORLDS ============ -->
+<div class="tab-panel" id="tab-worlds">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">A world is not a book</div><div class="activity-sub">A place, a time, and an argument</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Athens argued about justice while Plato wrote. Geneva argued about the new science while Mary Shelley wrote. A book is what you read. A world is where its people live and quarrel, and you can stand there and speak.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which one could you enter?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="A book. You read it. You cannot stand inside it.">Frankenstein</button>
+            <button class="opt" data-correct="true" data-fb="Yes. A place, a time, and people who disagree.">Geneva in the 1790s, where the council argues about the new science</button>
+            <button class="opt" data-correct="false" data-fb="A theme. You cannot speak to a theme. You can speak to the people of Geneva about it.">Responsibility for what we create</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Ten worlds</div><div class="activity-sub">Open at least four. Read the question each one cannot settle.</div></div></div>
+    <div class="activity-body">
+      <div class="world-grid" data-key="worldBrowse" data-pick="false"></div>
+      <div class="q"><div class="q-prompt">Which two pulled at you, and why?<span class="saved-dot"></span></div><textarea class="answer" data-key="pull" data-label="Two worlds that pulled at me" data-required placeholder="Athens, because... Prague, because..."></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="choose">Choose your world &#8594;</button>
+</div>
+
+<!-- ============ 3 · YOUR WORLD ============ -->
+<div class="tab-panel" id="tab-choose">
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">Choose your world</div><div class="activity-sub">One world for the whole semester</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Not the book you liked most. The argument you want to be inside for four months. Open a card and click <strong>Choose this world</strong>.</div></div>
+      <div class="world-grid" data-key="world" data-label="My world" data-required></div>
+      <div class="q plain"><div class="q-prompt">A world of your own? Name the text, the place, and the time. Your teacher approves it before this lesson is due.<span class="saved-dot"></span></div><input class="answer" type="text" data-key="worldOther" data-label="A world I am proposing (if any)" placeholder="Optional" /></div>
+    </div>
+  </div>
+
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">Why this one</div><div class="activity-sub">Two honest sentences</div></div></div>
+    <div class="activity-body">
+      <div class="notebook"><div class="nb-title">A MODEL, GENEVA</div><div class="nb-line">I want Geneva because its argument is mine. I make things, and I do not always ask who they are for.</div><div class="nb-line">I will have to learn how Geneva was governed in the 1790s. Right now all I know is the lake.</div></div>
+      <div class="q"><div class="q-prompt">Why <span data-project-text="world" data-empty="this world"></span>?<span class="saved-dot"></span></div><textarea class="answer" data-key="worldWhy" data-label="Why this world" data-required placeholder="I want this world because..."></textarea></div>
+      <div class="q"><div class="q-prompt">What you do not know yet, and will have to learn<span class="saved-dot"></span></div><textarea class="answer" data-key="worldLearn" data-label="What I will have to learn" data-required placeholder="I know... I do not yet know..."></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="role">Decide who you are &#8594;</button>
+</div>
+
+<!-- ============ 4 · YOUR ROLE ============ -->
+<div class="tab-panel" id="tab-role">
+  <div class="project-strip" data-fields="world"></div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">8</div><div><div class="activity-title">Where you stand</div><div class="activity-sub">Inside the world, or looking at it from now</div></div></div>
+    <div class="activity-body">
+      <div class="stance-cards" data-key="stance" data-project="stance" data-label="Where I stand" data-required>
+        <div class="stance-card" data-value="inworld"><div class="sc-t">In the world</div><div class="sc-d">You live there. You speak to people of that time and place. You owe them the truth about their own world.</div></div>
+        <div class="stance-card" data-value="present"><div class="sc-t">In the present</div><div class="sc-d">You speak today, to people alive now, about that world. You owe them the truth about the book and its history.</div></div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-row"><div class="cr-p">A magistrate of Geneva addressing the council in 1795</div><div class="opts"><button class="opt" data-correct="true" data-fb="In the world. He lives there, and so does his audience.">In the world</button><button class="opt" data-correct="false" data-fb="He is not looking back at Geneva. He is standing in it.">In the present</button></div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">A journalist today writing about a lab that races ahead of its own questions, with Frankenstein as her lens</div><div class="opts"><button class="opt" data-correct="false" data-fb="She writes now, about now. The old story is her lens, not her home.">In the world</button><button class="opt" data-correct="true" data-fb="In the present. Her readers are alive today.">In the present</button></div><div class="opt-fb"></div></div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">9</div><div><div class="activity-title">Who you are</div><div class="activity-sub">Someone people listen to</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>A magistrate. A lecturer. A journalist. An innkeeper everyone confides in. Never a student writing for a teacher. Click a seed to start, then make it yours.</div></div>
+      <div class="seeds" data-from="roles" data-fill="role"></div>
+      <div class="q plain"><div class="q-prompt">Your role, in a phrase<span class="saved-dot"></span></div><input class="answer" type="text" data-key="role" data-project="role" data-label="My role" data-required placeholder="A magistrate of Geneva who sits on the council" /></div>
+      <div class="q"><div class="q-prompt">Who you are, and why anyone listens to you<div class="q-hint">Your work, your place, your standing. Three sentences.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="roleWho" data-label="Who I am and why they listen" data-required></textarea></div>
+      <div class="two">
+        <div class="q"><div class="q-prompt">What you know that others do not<span class="saved-dot"></span></div><textarea class="answer" data-key="roleKnows" data-label="What I know that others do not" data-required></textarea></div>
+        <div class="q"><div class="q-prompt">What you risk by speaking<div class="q-hint">Every real speaker risks something.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="roleLoses" data-label="What I risk by speaking" data-required></textarea></div>
+      </div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="audience">Decide who you are talking to &#8594;</button>
+</div>
+
+<!-- ============ 5 · YOUR AUDIENCE ============ -->
+<div class="tab-panel" id="tab-audience">
+  <div class="project-strip" data-fields="world,stance,role"></div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">10</div><div><div class="activity-title">Who you are talking to</div><div class="activity-sub">Real people who could be moved</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Not everyone. Not your teacher. A group with a name, a number, and beliefs of its own. The council of Geneva: twenty-five men who fear disorder more than they fear a new science.</div></div>
+      <div class="seeds" data-from="audiences" data-fill="audience"></div>
+      <div class="q plain"><div class="q-prompt">Your audience, with a rough number<span class="saved-dot"></span></div><input class="answer" type="text" data-key="audience" data-project="audience" data-label="My audience" data-required placeholder="The council of Geneva: twenty-five magistrates who fear disorder" /></div>
+      <div class="q"><div class="q-prompt">What they already believe<div class="q-hint">Write it the way they would say it.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="audBelieve" data-label="What they already believe" data-required></textarea></div>
+      <div class="two">
+        <div class="q"><div class="q-prompt">What they gain if you persuade them, and what they lose<span class="saved-dot"></span></div><textarea class="answer" data-key="audGainLose" data-label="What they gain and lose" data-required></textarea></div>
+        <div class="q"><div class="q-prompt">What might move them<div class="q-hint">A fear, a hope, a fact, a story, a person they trust.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="audMove" data-label="What might move them" data-required></textarea></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">11</div><div><div class="activity-title">How well do you know them?</div><div class="activity-sub">Pick the closest sentence</div></div></div>
+    <div class="activity-body">
+      <div class="choices" data-key="audConfidence" data-label="How well I know my audience">
+        <button class="choice" type="button" data-value="Well. I could argue their side for them." data-fb="Good. Lesson 2 asks you to state their strongest objection fairly. Name one thing they fear that you do not.">Well. I could argue their side.</button>
+        <button class="choice" type="button" data-value="Roughly. I am guessing at what they believe." data-fb="Honest, and usual at this point. In Lesson 3 you find two real documents that show what they believed. Write what you hope those documents will tell you.">Roughly. I am guessing at what they believe.</button>
+        <button class="choice" type="button" data-value="Barely. They sounded right." data-fb="Then write the first three things you need to find out. Knowing what you do not know is where research starts.">Barely. They sounded right.</button>
+      </div>
+      <div class="choice-fb"></div>
+      <div class="q"><div class="q-prompt">What you most need to find out about them<span class="saved-dot"></span></div><textarea class="answer" data-key="audFindOut" data-label="What I need to find out about my audience" data-required placeholder="Whether they... How they reacted when..."></textarea></div>
+      <div class="think">You may ask Claude to play your audience and object to you. Keep what rings true. Write your own words here, and note the exchange in your AI log when you start it in Lesson 3.</div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Your PDF &#8594;</button>
+</div>
+
+<!-- ============ 6 · YOUR PDF ============ -->
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="world,stance,role,audience"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">12</div><div><div class="activity-title">Your three choices, on one page</div><div class="activity-sub">Download it. Every lesson from here builds on it.</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">EVERYTHING YOU WROTE TODAY</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU TURN IT IN</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I chose one world, or proposed one for my teacher to approve.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I chose where I stand and wrote my role: who I am, what I know, what I risk.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I named a real audience with a number, and what they believe, gain, lose, and might be moved by.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I saved the PDF as LastName_ENG4H_Lesson1.pdf in my English IV Honors folder and uploaded it to Assignment 1.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> Lesson 2: what you want your audience to do, why that is wise, and how you will reach them. Today's answers will be waiting there.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH IV HONORS &middot; Into the World</div>
+  <div class="f2">Lesson 1 of 8 &middot; Enter a World</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script src="worlds.js"></script>
+<script src="itw.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.3; ELA.12.R.1.2" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A); TEKS 110.39(c)(5)(B)" />
+<title>English IV Honors &middot; The Door Opens</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 3 &middot; Module 3: What We Become &middot; Week 1 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #1a2340;">What We Become</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Metamorphosis</div>
+        <div style="font-size: 12px; color: #1a2340;">Franz Kafka, 1915 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What makes a monster, and what makes us human?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Door Opens</div>
+        <div style="font-size: 16px; color: #1a2340;">A mind no one can hear, and a father who drives him back</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Gregor opens the door, and the family sees him.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Inside, Gregor is the same son and salesman who wanted to keep his job. Outside, the clerk, the mother, and the father see only a creature. The lesson reads the gap between what Gregor means and what is perceived, and compares his reception with that of the creature in Frankenstein.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe the gap between Gregor’s intentions and how others perceive him at the door.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how the clerk, the mother, and the father each respond.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can compare Gregor’s reception with the creature’s in Frankenstein.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Reread the end of Part I, from Gregor turning the key to the moment he is shut back in his room.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A MIND NO ONE CAN HEAR</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gregor turns the key with his mouth, since he has no hands, and opens the door. Before the door opened, the clerk had already remarked that the voice was an animal’s. The sight of Gregor settles the matter at once: the clerk cries out, presses a hand to his mouth, and backs away step by step. The mother, her hair still loose from bed, sinks to the floor. The father clenches his fists and then weeps.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Leaning in the doorway, Gregor still means to calm the clerk, to protect his post, and to spare his parents. He speaks at length, reasoning and pleading, and the narration stays inside his mind, so the reader sees these intentions. The people in the room do not hear them. The clerk turns away as soon as Gregor begins and edges toward the hall. No one in the room asks what Gregor is trying to say.</p>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">In the door scene, the gap between Gregor’s mind and what others perceive is best described as...</div>
+            <div class="widget-options">
+                <button data-response="Partly. The sound is one factor, but the clerk reacts at the sight of him, before Gregor has said anything long.">A language problem: his words are garbled, so the others cannot know what he means.</button>
+                <button data-response="The scene supports this. Even where Gregor’s meaning is clear to the reader, no one in the room looks for it.">A recognition problem: the others cannot see the person inside the body.</button>
+                <button data-response="The text gives them little time or reason to try; the scene moves from shock to flight in moments. The point concerns what they see more than how hard they try.">An effort problem: the family could understand him if they tried harder.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; DRIVEN BACK</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As the clerk edges out toward the stairs, Gregor lets go of the door and pushes after him, believing the clerk must be calmed to save his position. He drops onto his many legs, and his body at last obeys him. The mother backs into the breakfast table and upsets the coffee pot. Gregor snaps his jaws at the spilled coffee, and she screams and flees into the father’s arms. When Gregor makes a run for the clerk, the clerk leaps down the stairs and is gone. The father takes the clerk’s stick, left behind with his hat and coat, and a newspaper, and herds Gregor toward his room, stamping and hissing.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">In the doorway Gregor is too wide to pass. His side is scraped and injured. The father gives a hard shove, and Gregor is sent bleeding into his room. The door is slammed shut. The father who wept a moment earlier acts, once the clerk has fled, as though only the creature remains to be dealt with.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; THE SAME SCENE, TWO VIEWS</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%;"><tr><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 20%;">Moment</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 40%;">What Gregor intends</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 8px 10px; border: 1px solid #0E1C42; width: 40%;">What the others perceive</th></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Opening the door</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">To show himself and settle matters with the firm.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">A creature in the doorway; the clerk backs away.</td></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Speaking</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">A reasoned plea to be allowed to go to work.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Noise; the clerk had already called the voice an animal’s.</td></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Following the clerk</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">To win him over and save his position.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">A pursuit by a monster.</td></tr><tr><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF; font-weight: bold; color: #0E1C42; background: #FDF3E3;">Speaking to his mother</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">Gentle reassurance.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 8px 10px; border: 1px solid #D0D9E8; vertical-align: top; background: #FFFFFF;">More screaming; she flees to the father.</td></tr></table></div>
+
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHO MADE GREGOR WHAT HE IS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frankenstein offers a comparison. Victor makes the creature, runs from it at first sight, and refuses to take responsibility for it. The creature, who has taught himself to speak well, approaches the De Lacey cottage. The blind father listens kindly, and when the sighted family returns, they drive the creature out. In both books recognition depends on sight more than on speech.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Gregor differs in one respect: no one made his body. The question turns to what else made him. The debt to the firm bound him to his work. His earnings supported the household, and his mother describes a son who thinks only of the business and never goes out. The body changed overnight. The conditions that formed him did not.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The reader holds both halves: a considerate mind and the horror it produces in others." data-hint="Ask whose thoughts the narration reports. Then ask what the reader knows that the clerk and the parents do not.">
+                <div class="widget-row-prompt">1. What does keeping the narration inside Gregor’s mind do during the door scene?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It lets the reader know his kind intentions while watching them land as horror.</button>
+                    <button data-choice="1">It proves that Gregor is lying to the clerk about being ill, since the reader hears his private plans.</button>
+                    <button data-choice="2">It lets the reader hear the clerk’s private thoughts as well as Gregor’s, so both sides are known.</button>
+                    <button data-choice="3">It leaves the reader unsure whether the creature in the room is really Gregor, as the family is.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Correct. The turn follows the clerk’s flight, and the father picks up the stick the clerk left behind." data-hint="Look at the order of events: what happens just before the father seizes the stick and the newspaper?">
+                <div class="widget-row-prompt">2. The father first weeps, then drives Gregor back. What explains the change?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is moved to pity, and the stick is meant to shield Gregor from the clerk.</button>
+                    <button data-choice="1">The clerk’s flight panics him, so he turns on Gregor instead.</button>
+                    <button data-choice="2">He has always been violent, and the sight of Gregor simply releases it.</button>
+                    <button data-choice="3">He understands what Gregor says to the clerk and is angered by it.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. In both books sight decides before speech does. The difference is that no one made Gregor’s body, so the question turns to what else shaped him." data-hint="Recall the creature’s speech to De Lacey and Gregor’s speech to the clerk. Ask what each listener reacts to first.">
+                <div class="widget-row-prompt">3. How does Gregor’s reception compare with the creature’s in Frankenstein?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Both are rejected by their makers, since the family built Gregor’s new form.</button>
+                    <button data-choice="1">Both are first accepted by whoever hears them, then rejected by the household.</button>
+                    <button data-choice="2">Both are judged by appearance before anyone considers what they mean to say.</button>
+                    <button data-choice="3">Both are rejected because they lack speech and cannot explain themselves.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>recognition</strong>: seeing and accepting someone as who he is.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>intention</strong>: what a person means to do, as distinct from how others read it.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 1 &middot; The Door Opens</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

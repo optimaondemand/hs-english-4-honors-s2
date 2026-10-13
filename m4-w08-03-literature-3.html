@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.2; ELA.12.R.1.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A); TEKS 110.39(c)(5)(B)" />
+<title>English IV Honors &middot; The Breaking</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 8</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Breaking</div>
+        <div style="font-size: 16px; color: #1a2340;">Frodo goes on alone for everyone&rsquo;s sake, and Sam will not let him.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The Company breaks, and the call it served does not.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Frodo chooses to go alone to spare the others the Ring. Sam refuses to be left. The chapter ends with two figures on the river and a Company scattered in the woods, which sets the self alone against the self with others.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain what Frodo sees on the Seat of Seeing and what he decides.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can compare the proposals the Company makes about Frodo&rsquo;s road.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how Sam&rsquo;s choice differs from Frodo&rsquo;s plan, and how both differ from Gregor&rsquo;s isolation.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read the rest of Book II, Chapter 10, The Breaking of the Fellowship, in your copy, from Frodo on the summit of Amon Hen to the end of the chapter.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE HOUR ALONE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aragorn tells the Company that the choice has come and that the Bearer must make it. He declines to advise Frodo. Frodo asks for an hour. He later tells Boromir that he knows what he should do: <q class="cr-quote" data-src="tolkien">I know what I should do, but I am afraid of doing it</q>.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">After Boromir&rsquo;s attempt Frodo reaches the Seat of Seeing and sees the whole of the war. He sees the lands in motion and Minas Tirith far away and beautiful, and his hope leaps. His eye is drawn east to Barad-dûr, and all hope leaves him. The Eye becomes aware of him and presses toward him. A second thought comes from another source and tells him to take off the Ring.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The text states what happens in him at that moment. He is <q class="cr-quote" data-src="tolkien">free to choose</q>, and he takes the Ring off. His decision follows at once: the evil of the Ring is at work in the Company, the Ring must leave them, and he will go alone. He lists his reasons. Some of the Company he cannot trust, and those he trusts are too dear to him, so he will not take them into danger. He also judges that Aragorn is needed in Minas Tirith. He puts on the Ring again and goes down the hill unseen.</p>
+
+    </div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which choice in the chapter looks hardest?</div>
+            <div class="widget-options">
+                <button data-response="It costs him his friends and his comfort, and he makes it afraid. The text also shows that he makes it after a moment of clear sight, and not in panic.">Frodo&rsquo;s decision to go alone.</button>
+                <button data-response="It costs Aragorn the leadership he has held since Moria, and it keeps to the settlement of the Council. The text presents the restraint as chosen and as hard.">Aragorn&rsquo;s decision to leave the choice with Frodo.</button>
+                <button data-response="Sam&rsquo;s choice costs him safety and takes no deliberation. The text shows the cost to him as plain and the choice as already made.">Sam&rsquo;s decision to follow.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE COMPANY WHILE HE IS AWAY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">While Frodo is gone the Company sits at the river and debates. Aragorn says that none of them can say which way he would choose in Frodo&rsquo;s place. Legolas suggests calling Frodo back and voting, and Gimli agrees. Gimli adds a statement that echoes the Council: <q class="cr-quote" data-src="tolkien">none of us is under any oath or command to seek Mount Doom</q>. Even so, he cannot leave Frodo.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aragorn proposes a smaller party of Sam, Gimli, and himself for the eastern road, with Boromir returning home. Merry and Pippin protest that they cannot let Frodo go to Mordor, and that they cannot leave him. Sam sees what the others miss: Frodo is not hesitating between roads. He is afraid, and if he finds the courage he will want to go alone.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aragorn answers the proposals to stop him with a statement about limits: <q class="cr-quote" data-src="tolkien">I do not think that it is our part to drive him one way or the other.</q></p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 18px 20px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; WHO DECIDES FOR THE RING-BEARER?</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; min-width: 560px;">
+<tr><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Proposal</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">How it treats the choice</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">What the text shows</th></tr>
+<tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Boromir on the hill: come to Minas Tirith, and lend him the Ring</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">As his to direct, then to take</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Counsel becomes demand, then force</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Aragorn: the choice is Frodo&rsquo;s; a small party for the east if Frodo goes</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">As Frodo&rsquo;s alone, with help offered</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">He leaves the decision where the Council put it</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Legolas: call Frodo back and vote</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">As a matter for the Company to settle</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Gimli notes that no one is bound by oath to the quest</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Merry and Pippin: stop him</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">As something to prevent for his own good</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Aragorn doubts they would succeed and says it is not their part</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Sam: let him choose, and go with him</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">As Frodo&rsquo;s own, with loyalty that asks no leave</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Sam names the real difficulty: Frodo is afraid</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">Frodo: go alone</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">As his own, to be carried without risk to others</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Sam answers him</td></tr>
+            </table></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Boromir returns without Frodo and says little. Aragorn asks if that is all he has to say. The Company scatters in panic, and Aragorn sees what is happening: <q class="cr-quote" data-src="tolkien">We shall all be scattered and lost</q>.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FRODO AND SAM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sam reasons his way to the boats. He is sure that Boromir is not lying but has not told everything, that something scared Frodo into deciding, and that Frodo cannot cross a river or a waterfall without a boat. He runs to the shore, sees a boat sliding into the water, and leaps after it. He falls in and sinks, and Frodo pulls him out by the hair.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The exchange is short. Frodo says <q class="cr-quote" data-src="tolkien">It would be the death of you to come with me, Sam</q> and that he could not bear it. Sam answers that he is coming and that he will not be left behind, and adds that otherwise he will damage every boat first: <q class="cr-quote" data-src="tolkien">I&rsquo;ll knock holes in all the boats first.</q> Frodo laughs. His plan is spoiled, and he is glad. He says <q class="cr-quote" data-src="tolkien">It is plain that we were meant to go together.</q></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Frodo gives way to Sam&rsquo;s will, and the consent is glad rather than grudging. Sam has his gear ready already, because he expected them to leave that day. The two cross the river to the southern slopes of Amon Lhaw, hide the boat, and set out over the hills into the Land of Shadow. The Company is left searching the woods behind them.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; ALONE AND WITH OTHERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frodo&rsquo;s solitude is chosen on behalf of others. He takes the Ring away from the Company so that it can do no more harm there. Aragorn had said it was not the Company&rsquo;s part to drive him, and the chapter treats that restraint as part of the answer, since the Council had said the burden could not be laid on another. Sam&rsquo;s loyalty is also free. No one orders him and no one binds him, and the text says plainly that Frodo is glad of it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The comparison with Gregor Samsa is a contrast. Gregor&rsquo;s isolation is imposed by others and deepens as the family&rsquo;s care thins. Frodo goes alone by his own judgment, and Sam answers at once with company. In both stories a person is cut off from others. In one the others close the door, and in the other a friend refuses to stay behind.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="2" data-fb="Right. Frodo says the evil of the Ring is already at work in the Company. He fears for those he loves and acts on that judgment." data-hint="Reread Frodo&rsquo;s reasons on the summit. He names both the ones he cannot trust and the ones he can. Pick the option that fits both lists.">
+                <div class="widget-row-prompt">1. Frodo decides that the Ring must leave the Company before it does more harm. Which reading of his decision is best supported?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He fears only Boromir, and the others are in no danger.</button>
+                    <button data-choice="1">He distrusts every member of the Company equally and wants to be rid of them.</button>
+                    <button data-choice="2">He judges that the Ring harms those near it, so he removes it from them himself.</button>
+                    <button data-choice="3">He wants the quest to be his alone so that the credit is his.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Correct. Aragorn says it is not the Company&rsquo;s part to drive Frodo and doubts that they would succeed. He keeps to the Council&rsquo;s terms." data-hint="Aragorn gives a reason in his own words. Look for the option that matches his reason and not a motive the text does not mention.">
+                <div class="widget-row-prompt">2. Aragorn says it is not the Company&rsquo;s part to drive Frodo one way or the other. What does this show about the Company?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It keeps to the Council&rsquo;s settlement that the Ring-bearer&rsquo;s course is his to choose.</button>
+                    <button data-choice="1">Aragorn has given up leading and no longer cares how the quest ends.</button>
+                    <button data-choice="2">Aragorn expects Frodo to fail and sees no use in arguing.</button>
+                    <button data-choice="3">Aragorn secretly wants Frodo to go east alone.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Right. Frodo calls the plan spoiled and says he is glad. The text presents his acceptance as a recognition of Sam&rsquo;s choice." data-hint="Listen to what Frodo says as he gives in: he says how he feels. Pick the option that matches his words and not a practical difficulty.">
+                <div class="widget-row-prompt">3. Frodo meant to go alone, yet he gives in to Sam. Which statement best explains why?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He fears Sam will tell the others where the boat is hidden.</button>
+                    <button data-choice="1">He decides Sam is too foolish to be left behind safely.</button>
+                    <button data-choice="2">He cannot reach the far shore without Sam&rsquo;s help with the paddle.</button>
+                    <button data-choice="3">He sees that Sam&rsquo;s loyalty is freely given, and he is glad of it.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>burden</strong>: a heavy duty carried on behalf of others.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>coerce</strong>: to force someone by pressure or threat.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>companion</strong>: a person who goes with another by choice.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 8 &middot; The Breaking</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

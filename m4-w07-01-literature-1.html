@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.2" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A)" />
+<title>English IV Honors &middot; Lothlórien</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 7</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Lothlórien</div>
+        <div style="font-size: 16px; color: #1a2340;">The Elves&rsquo; welcome and suspicion, the blindfold, and the grief for Gandalf.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A refuge admits strangers only on terms, and the Company arrives carrying a loss.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Lothlórien welcomes the Company and guards itself in the same hour. The chapter shows how hospitality and caution can sit together, and the next chapter shows the Company grieving in the place that took it in.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe the conditions the Elves set on their welcome and what each one protects.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how Haldir connects the blindfold to the Enemy&rsquo;s power.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can compare how Celeborn and Galadriel respond to the news of Gandalf&rsquo;s fall.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book II, Chapter 6, Lothlórien, in your copy. Then read Chapter 7, The Mirror of Galadriel, as far as the Company&rsquo;s first night in the pavilion.</div>
+        </div>
+    </div>
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 7px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127963; SETTING</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;">Lothlórien lies between two rivers, the Silverlode and the Great River. Its Elves are the Galadhrim, the Tree-people, and they keep watch from wooden platforms in the mallorn trees.</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;">Celeborn and Galadriel rule it. The Company arrives in winter with eight members: four hobbits, two Men, an Elf, and a Dwarf. Gandalf was lost in Moria.</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;">No Dwarf had entered the wood in a long age, and the Elves of the wood had little dealing with other peoples.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE EDGE OF THE WOOD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chapter 6 opens at the Dimrill Dale. Aragorn grieves for Gandalf, then turns the Company toward the road. Gimli stops at the Mirrormere to look at Durin&rsquo;s Stone, and Aragorn tends the hurts of Frodo and Sam in a dell. Under Frodo&rsquo;s jacket he finds a mail-coat of mithril, which explains why Frodo survived the blow in Moria.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">At nightfall the Company reaches the eaves of the Golden Wood. Boromir holds back. He repeats what Gondor says of the place: few who go in come out, and none unharmed. Aragorn corrects the word:</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><q class="cr-quote" data-src="tolkien">Say not unscathed, but if you say unchanged, then maybe you will speak the truth</q>, and he adds that Gondor&rsquo;s lore must be failing if its people now speak evil of the wood.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">He closes the argument with a statement about the place and about the visitor: <q class="cr-quote" data-src="tolkien">fair and perilous; but only evil need fear it, or those who bring some evil with them.</q> The sentence makes the wood a test of what a traveller carries in, and the next chapter applies it to named characters.</p>
+
+    </div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which statement best describes how the Elves treat the Company on the first night?</div>
+            <div class="widget-options">
+                <button data-response="The welcome is real, but it is not free of terms. The Elves watch from above, challenge the travellers with a single word, and keep the Dwarf under a ban.">They welcome the Company freely and ask for nothing.</button>
+                <button data-response="That misses the shelter. The hobbits are taken up into the trees, given cloaks and food, and kept safe from the Orcs who pass in the night.">They treat the Company as intruders and offer no shelter.</button>
+                <button data-response="This fits the text. Shelter is given, and Haldir states conditions for Gimli in the same conversation.">They offer shelter and set limits at the same moment.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HOSPITALITY WITH CONDITIONS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Elves have known of the Company for some time. They speak from the branches, and Legolas answers them. Frodo and Sam climb a rope ladder to a platform where Haldir waits. He speaks to them in the Common Language and says that they do not look evil. He accepts them because Elrond asked and because they come with an Elf of his northern kindred. He then asks how many there are and learns of the Dwarf, whom the law of the wood does not admit. He yields only on terms: Aragorn and Legolas must answer for Gimli, and Gimli must go blindfold.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next morning Haldir guides the Company to the river Celebrant and sets up ropes as a bridge, then names the blindfold again at the border of the Naith. Gimli refuses and lays a hand on his axe. Haldir answers that he does not doubt Gimli and still cannot set the law aside. Aragorn ends the quarrel by having every member of the Company blindfolded, Legolas included.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 18px 20px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#127963; THE TERMS OF THE WELCOME</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; min-width: 560px;">
+<tr><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Condition</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Who it falls on</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Reason given</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">What it protects</th></tr>
+<tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Wait while the Elves decide, then stay in the trees</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The whole Company; the hobbits go to one platform and the rest to another</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Orcs and wolves are near, and the Company may have been followed from Moria</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The Company and the Elves who watch the border</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">The Dwarf passes only blindfold</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Gimli</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A law of the Elves, kept since the Dark Days</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">The secrets of the Naith</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">Everyone is blindfolded</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The whole Company</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Aragorn orders it so that the Dwarf is not singled out</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The fellowship of the Company itself</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">The blindfolds come off</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">All eight</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">A message from the Lord and Lady: all may walk free</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Trust, now granted by those who rule</td></tr>
+            </table></div>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY THE BLINDFOLD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Haldir gives a reason that reaches beyond the dispute with Gimli. He says that <q class="cr-quote" data-src="tolkien">in nothing is the power of the Dark Lord more clearly shown than in the estrangement that divides all those who still oppose him.</q> The Elves keep the law because trust has grown rare, and they cannot risk their land on a stranger&rsquo;s word.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He describes the cost to his own people with a contrast between two instruments: <q class="cr-quote" data-src="tolkien">our hands are more often upon the bowstring than upon the harp</q>. The bow and the harp stand for a life spent on defence against a life spent on music. The Elves are generous within a narrow ring of safety, and they know what the narrowness costs them.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The scene gives a second view of hospitality that the module has already met. In Bree the inn welcomed hobbits and eyed Strider with suspicion. In the Samsa household guests were welcomed while the son was kept out of sight. Lothlórien offers shelter and watchfulness together and names its reasons, and the Elves then act on a message that lifts the condition.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="2" data-fb="Right. Haldir separates trust in the person from the safety of the realm. Both are true at once, and the law holds." data-hint="Reread Haldir&rsquo;s reply to Gimli. He says what he thinks of Gimli first, and then names whose the law is. Ask whether the two statements agree or conflict.">
+                <div class="widget-row-prompt">1. Haldir tells Gimli that he does not doubt him, and then says the blindfold is the law and not his to set aside. What does this show about hospitality in Lothlórien?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Haldir dislikes Dwarves and uses the law as cover for that dislike.</button>
+                    <button data-choice="1">The Elves treat every guest alike, so Gimli has no special reason to object.</button>
+                    <button data-choice="2">A rule made for the realm&rsquo;s safety binds a host who trusts the guest in person.</button>
+                    <button data-choice="3">Haldir lacks authority and must wait for a higher Elf to decide.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; GRIEF IN THE CITY OF THE TREES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Caras Galadhon the Company is brought before Celeborn and Galadriel. Celeborn counts eight where the messages promised nine. Galadriel says that Gandalf never crossed the borders, and Aragorn tells her that he fell into shadow in Moria. The Elves cry out. Aragorn tells the full tale at Celeborn&rsquo;s request, and Legolas names the Balrog.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Celeborn answers in sorrow and in blame. He says that, had he known the Dwarves had stirred the evil again, he would have forbidden the Company to pass the northern borders, and he suggests that Gandalf fell from wisdom into folly. Galadriel rebukes the suggestion: <q class="cr-quote" data-src="tolkien">Needless were none of the deeds of Gandalf in life.</q> She adds that the Company cannot report his full purpose, and that <q class="cr-quote" data-src="tolkien">the followers are blameless</q>. She then welcomes Gimli by naming the Dwarves&rsquo; old places in his own tongue. Celeborn withdraws his harsh words with the plain statement <q class="cr-quote" data-src="tolkien">I spoke in the trouble of my heart.</q></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Galadriel closes the audience with a warning and a condition: the quest is on the edge of a knife, and <q class="cr-quote" data-src="tolkien">Yet hope remains while all the Company is true.</q> In the days that follow the Elves sing laments for Gandalf, and Legolas will not translate them, for his grief is still too near for song. Frodo puts his own sorrow into a poem, but only snatches of it stay with him. It ends with Gandalf alone on the bridge. Frodo adds that he cannot face carrying the news to Bilbo.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>estrangement</strong>: a division between people who ought to stand together.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>kindred</strong>: a people or family joined by common descent.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>lament</strong>: a song or poem of grief.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 7 &middot; Lothlórien</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

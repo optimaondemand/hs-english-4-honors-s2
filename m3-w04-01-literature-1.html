@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A)" />
+<title>English IV Honors &middot; Miss Brill</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 3 &middot; Module 3: What We Become &middot; Week 4 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #1a2340;">What We Become</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">&ldquo;Miss Brill&rdquo; and &ldquo;Araby&rdquo;</div>
+        <div style="font-size: 12px; color: #1a2340;">Katherine Mansfield, 1922; James Joyce, 1914 (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What makes a monster, and what makes us human?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 4</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Miss Brill</div>
+        <div style="font-size: 16px; color: #1a2340;">A weekly outing, an imagined company, and one overheard remark</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Miss Brill believes she belongs to the scene around her. One overheard remark shows how the scene sees her.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The narration stays close to her thoughts, so the story reports what she notices and what she leaves out. The details she skips carry the meaning: the cupboard rooms, the silent regulars, the fur in its box.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe how the narration stays close to Miss Brill&rsquo;s thoughts and what that closeness hides.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain how the idea of a play gives her a place in the crowd and how the overheard remark removes it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can read the closing images as a change in what she understands.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read the story below. Full text: <a href="https://www.gutenberg.org/ebooks/1429" style="color:#3B4E8C;">Gutenberg eBook #1429</a> (<em>The Garden Party</em>).</div>
+        </div>
+        <div class="embed-reading" data-src="mansfield" data-part="brill"><details class="embed-reading-panel" data-ra-skip style="border:1px solid #D0D9E8;border-left:5px solid #C7922C;border-radius:8px;margin:16px 0;background:#FFFFFF;"><summary style="cursor:pointer;padding:12px 16px;font-size:14px;color:#0E1C42;background:#FDF3E3;border-radius:6px;"><strong>&#128214; Read the full text: Katherine Mansfield, &ldquo;Miss Brill&rdquo;</strong></summary><div style="padding:16px 20px;font-size:15px;line-height:1.65;color:#1a2340;max-height:560px;overflow-y:auto;"><p style="margin:0 0 12px;">Although it was so brilliantly fine—the blue sky powdered with gold and great spots of light like white wine splashed over the Jardins Publiques—Miss Brill was glad that she had decided on her fur. The air was motionless, but when you opened your mouth there was just a faint chill, like a chill from a glass of iced water before you sip, and now and again a leaf came drifting—from nowhere, from the sky. Miss Brill put up her hand and touched her fur. Dear little thing! It was nice to feel it again. She had taken it out of its box that afternoon, shaken out the moth-powder, given it a good brush, and rubbed the life back into the dim little eyes. “What has been happening to me?” said the sad little eyes. Oh, how sweet it was to see them snap at her again from the red eiderdown!... But the nose, which was of some black composition, wasn’t at all firm. It must have had a knock, somehow. Never mind—a little dab of black sealing-wax when the time came—when it was absolutely necessary.... Little rogue! Yes, she really felt like that about it. Little rogue biting its tail just by her left ear. She could have taken it off and laid it on her lap and stroked it. She felt a tingling in her hands and arms, but that came from walking, she supposed. And when she breathed, something light and sad—no, not sad, exactly—something gentle seemed to move in her bosom.</p>
+<p style="margin:0 0 12px;">There were a number of people out this afternoon, far more than last Sunday. And the band sounded louder and gayer. That was because the Season had begun. For although the band played all the year round on Sundays, out of season it was never the same. It was like some one playing with only the family to listen; it didn’t care how it played if there weren’t any strangers present. Wasn’t the conductor wearing a new coat, too? She was sure it was new. He scraped with his foot and flapped his arms like a rooster about to crow, and the bandsmen sitting in the green rotunda blew out their cheeks and glared at the music. Now there came a little “flutey” bit—very pretty!—a little chain of bright drops. She was sure it would be repeated. It was; she lifted her head and smiled.</p>
+<p style="margin:0 0 12px;">Only two people shared her “special” seat: a fine old man in a velvet coat, his hands clasped over a huge carved walking-stick, and a big old woman, sitting upright, with a roll of knitting on her embroidered apron. They did not speak. This was disappointing, for Miss Brill always looked forward to the conversation. She had become really quite expert, she thought, at listening as though she didn’t listen, at sitting in other people’s lives just for a minute while they talked round her.</p>
+<p style="margin:0 0 12px;">She glanced, sideways, at the old couple. Perhaps they would go soon. Last Sunday, too, hadn’t been as interesting as usual. An Englishman and his wife, he wearing a dreadful Panama hat and she button boots. And she’d gone on the whole time about how she ought to wear spectacles; she knew she needed them; but that it was no good getting any; they’d be sure to break and they’d never keep on. And he’d been so patient. He’d suggested everything—gold rims, the kind that curved round your ears, little pads inside the bridge. No, nothing would please her. “They’ll always be sliding down my nose!” Miss Brill had wanted to shake her.</p>
+<p style="margin:0 0 12px;">The old people sat on the bench, still as statues. Never mind, there was always the crowd to watch. To and fro, in front of the flower-beds and the band rotunda, the couples and groups paraded, stopped to talk, to greet, to buy a handful of flowers from the old beggar who had his tray fixed to the railings. Little children ran among them, swooping and laughing; little boys with big white silk bows under their chins, little girls, little French dolls, dressed up in velvet and lace. And sometimes a tiny staggerer came suddenly rocking into the open from under the trees, stopped, stared, as suddenly sat down “flop,” until its small high-stepping mother, like a young hen, rushed scolding to its rescue. Other people sat on the benches and green chairs, but they were nearly always the same, Sunday after Sunday, and—Miss Brill had often noticed—there was something funny about nearly all of them. They were odd, silent, nearly all old, and from the way they stared they looked as though they’d just come from dark little rooms or even—even cupboards!</p>
+<p style="margin:0 0 12px;">Behind the rotunda the slender trees with yellow leaves down drooping, and through them just a line of sea, and beyond the blue sky with gold-veined clouds.</p>
+<p style="margin:0 0 12px;">Tum-tum-tum tiddle-um! tiddle-um! tum tiddley-um tum ta! blew the band.</p>
+<p style="margin:0 0 12px;">Two young girls in red came by and two young soldiers in blue met them, and they laughed and paired and went off arm-in-arm. Two peasant women with funny straw hats passed, gravely, leading beautiful smoke-coloured donkeys. A cold, pale nun hurried by. A beautiful woman came along and dropped her bunch of violets, and a little boy ran after to hand them to her, and she took them and threw them away as if they’d been poisoned. Dear me! Miss Brill didn’t know whether to admire that or not! And now an ermine toque and a gentleman in grey met just in front of her. He was tall, stiff, dignified, and she was wearing the ermine toque she’d bought when her hair was yellow. Now everything, her hair, her face, even her eyes, was the same colour as the shabby ermine, and her hand, in its cleaned glove, lifted to dab her lips, was a tiny yellowish paw. Oh, she was so pleased to see him—delighted! She rather thought they were going to meet that afternoon. She described where she’d been—everywhere, here, there, along by the sea. The day was so charming—didn’t he agree? And wouldn’t he, perhaps?... But he shook his head, lighted a cigarette, slowly breathed a great deep puff into her face, and even while she was still talking and laughing, flicked the match away and walked on. The ermine toque was alone; she smiled more brightly than ever. But even the band seemed to know what she was feeling and played more softly, played tenderly, and the drum beat, “The Brute! The Brute!” over and over. What would she do? What was going to happen now? But as Miss Brill wondered, the ermine toque turned, raised her hand as though she’d seen some one else, much nicer, just over there, and pattered away. And the band changed again and played more quickly, more gayly than ever, and the old couple on Miss Brill’s seat got up and marched away, and such a funny old man with long whiskers hobbled along in time to the music and was nearly knocked over by four girls walking abreast.</p>
+<p style="margin:0 0 12px;">Oh, how fascinating it was! How she enjoyed it! How she loved sitting here, watching it all! It was like a play. It was exactly like a play. Who could believe the sky at the back wasn’t painted? But it wasn’t till a little brown dog trotted on solemn and then slowly trotted off, like a little “theatre” dog, a little dog that had been drugged, that Miss Brill discovered what it was that made it so exciting. They were all on the stage. They weren’t only the audience, not only looking on; they were acting. Even she had a part and came every Sunday. No doubt somebody would have noticed if she hadn’t been there; she was part of the performance after all. How strange she’d never thought of it like that before! And yet it explained why she made such a point of starting from home at just the same time each week—so as not to be late for the performance—and it also explained why she had quite a queer, shy feeling at telling her English pupils how she spent her Sunday afternoons. No wonder! Miss Brill nearly laughed out loud. She was on the stage. She thought of the old invalid gentleman to whom she read the newspaper four afternoons a week while he slept in the garden. She had got quite used to the frail head on the cotton pillow, the hollowed eyes, the open mouth and the high pinched nose. If he’d been dead she mightn’t have noticed for weeks; she wouldn’t have minded. But suddenly he knew he was having the paper read to him by an actress! “An actress!” The old head lifted; two points of light quivered in the old eyes. “An actress—are ye?” And Miss Brill smoothed the newspaper as though it were the manuscript of her part and said gently; “Yes, I have been an actress for a long time.”</p>
+<p style="margin:0 0 12px;">The band had been having a rest. Now they started again. And what they played was warm, sunny, yet there was just a faint chill—a something, what was it?—not sadness—no, not sadness—a something that made you want to sing. The tune lifted, lifted, the light shone; and it seemed to Miss Brill that in another moment all of them, all the whole company, would begin singing. The young ones, the laughing ones who were moving together, they would begin, and the men’s voices, very resolute and brave, would join them. And then she too, she too, and the others on the benches—they would come in with a kind of accompaniment—something low, that scarcely rose or fell, something so beautiful—moving.... And Miss Brill’s eyes filled with tears and she looked smiling at all the other members of the company. Yes, we understand, we understand, she thought—though what they understood she didn’t know.</p>
+<p style="margin:0 0 12px;">Just at that moment a boy and girl came and sat down where the old couple had been. They were beautifully dressed; they were in love. The hero and heroine, of course, just arrived from his father’s yacht. And still soundlessly singing, still with that trembling smile, Miss Brill prepared to listen.</p>
+<p style="margin:0 0 12px;">“No, not now,” said the girl. “Not here, I can’t.”</p>
+<p style="margin:0 0 12px;">“But why? Because of that stupid old thing at the end there?” asked the boy. “Why does she come here at all—who wants her? Why doesn’t she keep her silly old mug at home?”</p>
+<p style="margin:0 0 12px;">“It’s her fu-fur which is so funny,” giggled the girl. “It’s exactly like a fried whiting.”</p>
+<p style="margin:0 0 12px;">“Ah, be off with you!” said the boy in an angry whisper. Then: “Tell me, ma petite chère—”</p>
+<p style="margin:0 0 12px;">“No, not here,” said the girl. “Not yet.”</p>
+<p style="margin:0 0 12px;">On her way home she usually bought a slice of honey-cake at the baker’s. It was her Sunday treat. Sometimes there was an almond in her slice, sometimes not. It made a great difference. If there was an almond it was like carrying home a tiny present—a surprise—something that might very well not have been there. She hurried on the almond Sundays and struck the match for the kettle in quite a dashing way.</p>
+<p style="margin:0 0 12px;">But to-day she passed the baker’s by, climbed the stairs, went into the little dark room—her room like a cupboard—and sat down on the red eiderdown. She sat there for a long time. The box that the fur came out of was on the bed. She unclasped the necklet quickly; quickly, without looking, laid it inside. But when she put the lid on she thought she heard something crying.</p><p style="font-size:12px;color:#3B4E8C;margin-top:14px;">Katherine Mansfield, &ldquo;Miss Brill,&rdquo; in <em>The Garden Party, and Other Stories</em> (1922; public domain; Project Gutenberg eBook #1429)</p></div></details></div>
+    </div>
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px; letter-spacing: 0.4px;">&#128218; HISTORICAL CONTEXT</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Katherine Mansfield (1888-1923) was born in Wellington, New Zealand, and lived most of her adult life in England and France. &ldquo;Miss Brill&rdquo; appeared in <em>The Garden Party and Other Stories</em> (1922), the year before her death. The story is set in public gardens, the Jardins Publiques, where a band plays in a rotunda. Mansfield wrote stories with little plot: the movement is a character&rsquo;s mind from moment to moment.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE VIEW FROM THE SEAT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The narration stays inside Miss Brill&rsquo;s head. Her phrases appear without quotation marks (&ldquo;<span class="pd-quote" data-src="mansfield">Dear little thing!</span>&rdquo; &ldquo;<span class="pd-quote" data-src="mansfield">Little rogue!</span>&rdquo;), so the reader hears her thoughts in her own voice. The story opens with her fur, which she has taken out of its box and brushed.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Miss Brill put up her hand and touched her fur. Dear little thing! It was nice to feel it again. She had taken it out of its box that afternoon, shaken out the moth-powder, given it a good brush, and rubbed the life back into the dim little eyes.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fur has been stored, aired, and revived for the season, and its nose &ldquo;<span class="pd-quote" data-src="mansfield">wasn’t at all firm</span>.&rdquo; The details prepare an image the ending completes: a worn thing taken out for an afternoon and put back in a box. Her own habit is to take company from other people&rsquo;s talk.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;She had become really quite expert, she thought, at listening as though she didn’t listen, at sitting in other people’s lives just for a minute while they talked round her.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She sorts the other regulars on the benches as strange:</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;They were odd, silent, nearly all old, and from the way they stared they looked as though they’d just come from dark little rooms or even—even cupboards!&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0 0;">The judgment is hers, and the story will place her in a dark little room of the same kind. A reader who notices this knows more than she does. That gap between what a character understands and what the reader sees is dramatic irony.</p>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE PLAY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As the band plays, Miss Brill reads the whole garden as a performance.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Oh, how fascinating it was! How she enjoyed it! How she loved sitting here, watching it all! It was like a play. It was exactly like a play.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then she finds that she is not only the audience.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;They were all on the stage. They weren’t only the audience, not only looking on; they were acting.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;No doubt somebody would have noticed if she hadn’t been there; she was part of the performance after all.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The idea gives her what the benches do not: a place in the scene and someone who would miss her. The only evidence for the place is her own reasoning (&ldquo;<span class="pd-quote" data-src="mansfield">No doubt</span>&rdquo;). The same pattern appears when she recalls reading the newspaper aloud to an old invalid and recasts the job as a role:</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Yes, I have been an actress for a long time.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The text does not settle whether the invalid spoke or whether the exchange belongs to her imagination. Either way the line shows what she wants: to be known as someone who has a part. Her sense of company at the height of the music has the same shape.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Yes, we understand, we understand, she thought—though what they understood she didn’t know.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">No one has spoken to her. The company is one she has supplied.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">On a first read, what does the &ldquo;<span class="pd-quote" data-src="mansfield">play</span>&rdquo; passage do for the reader?</div>
+            <div class="widget-options">
+                <button data-response="The delight is hers, and the passage is warm. The text also marks what she skips: she does not know what the company understands, and a faint chill runs through the music. The reader is given more than she has.">It shares her delight and treats the discovery as true.</button>
+                <button data-response="That reading fits the details. The idea rests on her reasoning alone, and the story has already shown she watches others from outside. Joy and fragility are both on the page.">It lets the reader feel her joy while sensing how fragile the idea is.</button>
+                <button data-response="The tone is gentler than mockery. The narration stays close to her feeling and does not stand above it, so the reader keeps sympathy even while seeing the gap.">It mocks her as foolish for imagining a stage.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE OVERHEARD REMARK</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Earlier, a woman in a shabby ermine toque is brushed off by a gentleman in grey. Miss Brill watches it as theater. The story gives her a mirror she does not recognize.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Now everything, her hair, her face, even her eyes, was the same colour as the shabby ermine,&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;The ermine toque was alone; she smiled more brightly than ever.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Later a young couple sits on the old couple&rsquo;s bench. Miss Brill has already cast them as &ldquo;<span class="pd-quote" data-src="mansfield">the hero and heroine</span>.&rdquo; Their talk answers her belief that someone would notice her absence.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">“But why? Because of that stupid old thing at the end there?” asked the boy. “Why does she come here at all—who wants her? Why doesn’t she keep her silly old mug at home?”</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">“It’s her fu-fur which is so funny,” giggled the girl. “It’s exactly like a fried whiting.”</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0 0;">Three details matter. The speakers do not know her and say nothing she could answer. The boy mocks the woman, and the girl mocks the fur. The cruelty is casual: the couple wants privacy (&ldquo;<span class="pd-quote" data-src="mansfield">No, not here</span>&rdquo;), and she is in the way. &ldquo;<span class="pd-quote" data-src="mansfield">Who wants her?</span>&rdquo; answers &ldquo;<span class="pd-quote" data-src="mansfield">somebody would have noticed</span>&rdquo; directly.</p>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128209; TWO VIEWS OF ONE AFTERNOON</div>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 18px 20px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; WHAT SHE BELIEVES AND WHAT THE SCENE SHOWS</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%;"><tr><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 10px 12px; border: 1px solid #0E1C42;">Moment</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 10px 12px; border: 1px solid #0E1C42;">What Miss Brill believes</th><th style="background: #0E1C42; color: #FFFFFF; font-size: 13px; text-align: left; padding: 10px 12px; border: 1px solid #0E1C42;">What the scene shows</th></tr><tr><td style="font-size: 14px; color: #0e1c42; padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; vertical-align: top;"><strong>The fur</strong></td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">A dear little thing that comes back to life each season.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">A worn piece with a loose nose, kept in a box and brushed for the occasion.</td></tr><tr><td style="font-size: 14px; color: #0e1c42; padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; vertical-align: top;"><strong>The regulars</strong></td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">Odd, silent people who seem to come from cupboards.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">She sits as silent and alone as they do, and goes home to a room she herself calls a cupboard.</td></tr><tr><td style="font-size: 14px; color: #0e1c42; padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; vertical-align: top;"><strong>The ermine toque</strong></td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">A scene in the play, watched from the audience.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">A woman of her own age and shabbiness, dismissed with a puff of smoke, who smiles harder.</td></tr><tr><td style="font-size: 14px; color: #0e1c42; padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; vertical-align: top;"><strong>Her place</strong></td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">An actress with a part; someone would notice her absence.</td><td style="font-size: 15px; color: #1a2340; line-height: 1.5; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top;">Two strangers who see an old woman in a funny fur and want her gone.</td></tr></table></div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE FUR IN ITS BOX</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The ending changes her routine. She usually buys a slice of honey-cake on the way home, and an almond in it makes the slice feel like a small gift.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;On her way home she usually bought a slice of honey-cake at the baker’s.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;But to-day she passed the baker’s by, climbed the stairs, went into the little dark room—her room like a cupboard—and sat down on the red eiderdown.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">&ldquo;<span class="pd-quote" data-src="mansfield">Cupboard</span>&rdquo; returns from the benches, and the red eiderdown returns from the opening, where the fur lay on it. The story ends with the fur going back into its box.</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;But when she put the lid on she thought she heard something crying.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The narration reports only what she thought she heard. The source of the sound is left open: the fur, the room, or Miss Brill herself. No speech, decision, or explanation follows.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. She watches the scene as part of the play, and the narration lets the reader see the likeness (the shabby fur, the aging, the bright smile) that she does not name." data-hint="Look at what Miss Brill does in the text after the woman is left alone: she watches, wonders what will happen next, and then the band changes tune. Does she connect it to herself?">
+                <div class="widget-row-prompt">1. Miss Brill watches the woman in the ermine toque being brushed off. What does the passage suggest about how she reads her own situation?</div>
+                <div class="widget-options">
+                    <button data-choice="0">She sees herself in the woman and decides to leave the gardens at once.</button>
+                    <button data-choice="1">She watches it as a scene in the play and misses its likeness to her own position.</button>
+                    <button data-choice="2">She feels nothing, because she has watched many scenes like it before.</button>
+                    <button data-choice="3">She is angry for the woman and wants to speak to the gentleman in grey.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Correct. The narration gives her impression and nothing more. The fur, the room, and Miss Brill herself are all possible sources, and the ending depends on that openness." data-hint="Reread the final sentence. Does the narration say who or what is crying, or only what she thought? Does it report any decision about the future?">
+                <div class="widget-row-prompt">2. The last sentence says she &ldquo;<span class="pd-quote" data-src="mansfield">thought she heard something crying</span>.&rdquo; Which reading does the text support?</div>
+                <div class="widget-options">
+                    <button data-choice="0">She has decided never to return to the gardens, and the crying marks that decision.</button>
+                    <button data-choice="1">The story punishes her for judging the people on the benches, and the crying is that judgment.</button>
+                    <button data-choice="2">The sound is the band music still ringing in her ears as she climbs the stairs.</button>
+                    <button data-choice="3">The source stays open: the fur, the room, or herself, since only her impression is reported.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>dramatic irony</strong>: a gap between what a character understands and what the reader sees.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>motif</strong>: an image that returns through a story, such as the cupboard, the box, and the red eiderdown.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>close narration</strong>: a way of telling in which the narrator stays inside one character&rsquo;s perception and phrasing.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 4 &middot; Miss Brill</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

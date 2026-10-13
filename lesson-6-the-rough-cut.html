@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English IV Honors &mdash; Lesson 6: The Rough Cut</title>
+<link rel="stylesheet" href="itw.css" />
+</head>
+<body data-lesson="L6" data-title="Lesson 6: The Rough Cut" data-assignment="Assignment 6">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH IV HONORS</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Honors Project</div><div class="strip-v">Into the World</div><div class="strip-s">Spring semester</div></div>
+  <div class="strip-cell"><div class="strip-k">Lesson</div><div class="strip-v">6 of 8 &middot; The Rough Cut</div><div class="strip-s">Q4, Weeks 3 to 4</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">A full-length rough version, two replies</div><div class="strip-s">Rough cut, peer replies</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v">Your PDF + your rough cut</div><div class="strip-s">Assignment 6 in Canvas</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">Lesson 6</div>
+    <div class="title-h">The Rough Cut</div>
+    <div class="title-s">Your rough cut is not polished, but every part of it exists from start to end. Today you bring it to full length, show where the other side speaks inside it, preview it for two classmates as their audience, and add your third scholarly article.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">Reach full length</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Find where the other side speaks</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Preview it for two classmates</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Add your third article</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Download your PDF</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 75 minutes</span><span class="need-chip">Your rough cut, at full length</span><span class="need-chip">The Peer Preview discussion in Canvas</span><span class="need-chip">Your JStor login</span></div>
+  <div class="project-strip" data-fields="world,role,audience,goal,medium"></div>
+  <div class="q plain" style="max-width:420px;"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="LastName" /></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="full"><span class="tab-n">1</span>Full length</button>
+  <button class="tab-btn" data-tab="other"><span class="tab-n">2</span>Where the other side speaks</button>
+  <button class="tab-btn" data-tab="preview"><span class="tab-n">3</span>Meet your audience</button>
+  <button class="tab-btn" data-tab="article"><span class="tab-n">4</span>Third article</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">5</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ============ 1 · FULL LENGTH ============ -->
+<div class="tab-panel" id="tab-full">
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">A rough version, at full length</div><div class="activity-sub">Rough means unpolished, not unfinished</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Rough means unpolished, not unfinished. Every part of your work exists and can be watched, heard, or read from start to end.</div></div>
+      <div data-hide-if-no-mode class="hide">
+        <div class="callout-gold" data-show-mode="vlog"><strong>Full length for a vlog</strong> is three scripted episodes of 6 to 10 minutes each, on camera, in role.</div>
+        <div class="callout-gold" data-show-mode="podcast"><strong>Full length for a podcast</strong> is two episodes of 15 to 20 minutes, or one of 30, in role.</div>
+        <div class="callout-gold" data-show-mode="article"><strong>Full length for a feature article</strong> is 2,500 to 3,500 words, with a headline, an opening summary, pull quotes, images with permission, and sources.</div>
+        <div class="callout-gold" data-show-mode="imitation"><strong>Full length for an imitation</strong> is about 3,000 words, or the performed equivalent, following the genre's conventions.</div>
+        <div class="callout-gold" data-show-mode="address"><strong>Full length for the Address</strong> is a 15 to 20 minute speech in classical shape: an opening, a first turn, the body, a second turn, and a close.</div>
+      </div>
+      <div class="callout-gold">If you have not chosen a medium yet, go back to Lesson 2 before finishing this activity.</div>
+      <div class="q plain"><div class="q-prompt">Where the file lives and its name<div class="q-hint">LastName_ENG4H_RoughCut plus the file type.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="roughFile" data-label="Where my rough cut lives and its name" data-required placeholder="Google Drive, LastName_ENG4H_RoughCut.mp4" /></div>
+      <div class="q"><div class="q-prompt">What is done, and what is still rough<span class="saved-dot"></span></div><textarea class="answer" data-key="roughState" data-label="What is done and what is still rough" data-required></textarea></div>
+      <p>What is still missing?</p>
+      <div class="chips" data-key="missing" data-label="What is still missing">
+        <button class="chip" type="button" data-value="An ending">An ending</button>
+        <button class="chip" type="button" data-value="The sources page">The sources page</button>
+        <button class="chip" type="button" data-value="The images">The images</button>
+        <button class="chip" type="button" data-value="The music">The music</button>
+        <button class="chip" type="button" data-value="The middle sags">The middle sags</button>
+        <button class="chip" type="button" data-value="Nothing, it is all there">Nothing, it is all there</button>
+      </div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="other">Continue: where the other side speaks &#8594;</button>
+</div>
+
+<!-- ============ 2 · WHERE THE OTHER SIDE SPEAKS ============ -->
+<div class="tab-panel" id="tab-other">
+  <div class="project-strip" data-fields="goal,framework"></div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">Where the other side speaks</div><div class="activity-sub">Answered without mockery, in a voice your audience recognizes</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>In Lesson 2 you wrote the best case against your goal, stated so fairly its holder would sign it. Now it has to live inside the work, in a voice your audience will recognize, and be answered without mockery.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which answer to the other side is fair?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="This dodges the argument with an image instead of answering the reason behind it.">Some will say discovery needs no permission; they have not seen the lake at night.</button>
+            <button class="opt" data-correct="true" data-fb="This states their reason in full, concedes what is true, then answers with one specific question.">Some will say discovery cannot ask permission in advance, and they are right that no one knows what a finding means until it is found; which is why I ask for an answer to one question only: who will bear it if it goes wrong.</button>
+            <button class="opt" data-correct="false" data-fb="A caricature. No one who holds the other side would say it this way.">Only a fool thinks discovery should be unwatched.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q plain"><div class="q-prompt">Where in the work the other side appears<div class="q-hint">A timestamp, a section, a page.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="otherWhere" data-label="Where the other side appears" data-required /></div>
+      <div class="q plain"><div class="q-prompt">In whose voice<span class="saved-dot"></span></div><input class="answer" type="text" data-key="otherVoice" data-label="In whose voice" data-required /></div>
+      <div class="q"><div class="q-prompt">How the work answers it without caricature<span class="saved-dot"></span></div><textarea class="answer" data-key="otherAnswer" data-label="How the work answers it without caricature" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">One sentence its holder could sign<span class="saved-dot"></span></div><textarea class="answer" data-key="otherSign" data-label="One sentence its holder could sign" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="preview">Continue: meet your audience &#8594;</button>
+</div>
+
+<!-- ============ 3 · MEET YOUR AUDIENCE ============ -->
+<div class="tab-panel" id="tab-preview">
+  <div class="project-strip" data-fields="world,role,audience"></div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Meet your audience: the preview</div><div class="activity-sub">Two classmates respond to your work as if they were your audience</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>The Peer Preview is a discussion in Canvas: you post your rough cut, and two classmates respond as if they were your audience. You do the same for two of theirs. The first three lines of your post name your world, your role, and your audience, so classmates know whom to play.</div></div>
+      <div class="q plain"><div class="q-prompt">Line 1: your world<div class="q-hint">Your saved world: <span data-project-text="world" data-empty="(not chosen yet)"></span></div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="postWorld" data-label="Post line 1: my world" data-required /></div>
+      <div class="q plain"><div class="q-prompt">Line 2: your role<div class="q-hint">Your saved role: <span data-project-text="role" data-empty="(not chosen yet)"></span></div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="postRole" data-label="Post line 2: my role" data-required /></div>
+      <div class="q plain"><div class="q-prompt">Line 3: your audience<div class="q-hint">Your saved audience: <span data-project-text="audience" data-empty="(not chosen yet)"></span></div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="postAudience" data-label="Post line 3: my audience" data-required /></div>
+      <div class="callout-gold">Posts open in Week 3. Replies are due by the end of Week 4.</div>
+      <p><strong>Classmate 1.</strong> Reply in the role of their audience.</p>
+      <div class="q plain"><div class="q-prompt">Their audience<span class="saved-dot"></span></div><input class="answer" type="text" data-key="r1Aud" data-label="Classmate 1: their audience" /></div>
+      <div class="q"><div class="q-prompt">One objection that audience would raise<span class="saved-dot"></span></div><textarea class="answer" data-key="r1Obj" data-label="Classmate 1: one objection" data-required></textarea></div>
+      <div class="two">
+        <div class="q"><div class="q-prompt">One thing that moved you<span class="saved-dot"></span></div><textarea class="answer" data-key="r1Moved" data-label="Classmate 1: what moved me" ></textarea></div>
+        <div class="q"><div class="q-prompt">One factual question<span class="saved-dot"></span></div><textarea class="answer" data-key="r1Q" data-label="Classmate 1: my factual question" ></textarea></div>
+      </div>
+      <p><strong>Classmate 2.</strong> Reply in the role of their audience.</p>
+      <div class="q plain"><div class="q-prompt">Their audience<span class="saved-dot"></span></div><input class="answer" type="text" data-key="r2Aud" data-label="Classmate 2: their audience" /></div>
+      <div class="q"><div class="q-prompt">One objection that audience would raise<span class="saved-dot"></span></div><textarea class="answer" data-key="r2Obj" data-label="Classmate 2: one objection" data-required></textarea></div>
+      <div class="two">
+        <div class="q"><div class="q-prompt">One thing that moved you<span class="saved-dot"></span></div><textarea class="answer" data-key="r2Moved" data-label="Classmate 2: what moved me" ></textarea></div>
+        <div class="q"><div class="q-prompt">One factual question<span class="saved-dot"></span></div><textarea class="answer" data-key="r2Q" data-label="Classmate 2: my factual question" ></textarea></div>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Be courteous, specific, and in role. Do not rewrite a classmate's work for them. This is not group work; each reply is your own reading, in the audience's voice.</div></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="article">Continue: your third article &#8594;</button>
+</div>
+
+<!-- ============ 4 · THIRD ARTICLE ============ -->
+<div class="tab-panel" id="tab-article">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Your third scholarly article</div><div class="activity-sub">What three articles let you say that one could not</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>This is your third scholarly article, found in JStor, the library database. Like the first two, it should give your work something you could not simply take on your own word.</div></div>
+      <div class="two">
+        <div class="q plain"><div class="q-prompt">Author<span class="saved-dot"></span></div><input class="answer" type="text" data-key="art3Author" data-label="Article 3: author" data-required /></div>
+        <div class="q plain"><div class="q-prompt">Title<span class="saved-dot"></span></div><input class="answer" type="text" data-key="art3Title" data-label="Article 3: title" data-required /></div>
+      </div>
+      <div class="q plain"><div class="q-prompt">Journal<span class="saved-dot"></span></div><input class="answer" type="text" data-key="art3Journal" data-label="Article 3: journal" data-required /></div>
+      <div class="q"><div class="q-prompt">What this article gives you<span class="saved-dot"></span></div><textarea class="answer" data-key="art3Gives" data-label="What article 3 gives me" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What the three articles together let you say to your audience that you could not say in January<span class="saved-dot"></span></div><textarea class="answer" data-key="threeTogether" data-label="What the three articles together let me say" data-required style="min-height:100px;"></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<!-- ============ 5 · WRAP UP ============ -->
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="world,role,audience,goal,medium"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">The rough cut, on one page</div><div class="activity-sub">Download the PDF and turn it in with your rough cut.</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU TURN IT IN</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My rough cut exists at full length and is named LastName_ENG4H_RoughCut.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I can point to where the other side speaks and how I answer it.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I posted my rough cut in the Peer Preview discussion with my three lines, and replied to two classmates as their audience.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My third article is in my sources list.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I downloaded the PDF, saved it as LastName_ENG4H_Lesson6.pdf, and uploaded it to Assignment 6 in Canvas with my rough cut.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next time.</strong> Lesson 7 is going public: finish, post to the class gallery, deliver it, and write your accuracy note.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH IV HONORS &middot; Into the World</div>
+  <div class="f2">Lesson 6 of 8 &middot; The Rough Cut</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script src="worlds.js"></script>
+<script src="itw.js"></script>
+</body>
+</html>

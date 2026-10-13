@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.2.4; ELA.12.R.1.2; ELA.12.R.1.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(4)(H); TEKS 110.39(c)(5)(B)" />
+<title>English IV Honors &middot; Alone in the Cosmos?</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 3 &middot; Module 3: What We Become</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #1a2340;">What We Become</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Synthesis</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Metamorphosis</div>
+        <div style="font-size: 12px; color: #1a2340;">Franz Kafka, 1915 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 14px; color: #0e1c42;">What makes a monster, and what makes us human?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 8</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Alone in the Cosmos?</div>
+        <div style="font-size: 16px; color: #1a2340;">The self alone and the self within a whole</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Emerson, Marcus, Herbert, and the characters of the module&rsquo;s stories place the self in different relations to others.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Emerson finds the self&rsquo;s authority in the self. Marcus puts the self inside a whole, and Herbert&rsquo;s speaker is named by a caller. Gregor, Miss Brill, and the boy in &ldquo;Araby&rdquo; each look for recognition and meet its absence.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can describe where each text places a self&rsquo;s standing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can separate solitude that is chosen from solitude that is imposed, using evidence.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can state a reading of the module&rsquo;s texts and test it against counter-evidence.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">No new reading. Passages from earlier weeks are reprinted below, and &ldquo;Miss Brill&rdquo; and &ldquo;Araby&rdquo; can be reread from Week 4.</div>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SELF ALONE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gregor is alone in a room that others closed. Miss Brill is alone in a crowd. She listens each week to a band in a public garden and imagines that everyone near her is part of one company and that she has a part in the play. She hears a young couple speak about her:</p>
+        <blockquote class="pd-quote" data-src="mansfield" style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Why does she come here at all—who wants her? Why doesn’t she keep her silly old mug at home?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Katherine Mansfield, &ldquo;Miss Brill&rdquo; (1922; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She goes home without her usual honey-cake, lays the fur in its box, and &ldquo;<span class="pd-quote" data-src="mansfield">when she put the lid on she thought she heard something crying</span>.&rdquo; The boy in &ldquo;Araby&rdquo; arrives at the bazaar too late, overhears a trivial conversation, and sees himself as &ldquo;<span class="pd-quote" data-src="joyce">a creature driven and derided by vanity</span>.&rdquo;</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Emerson treats solitude differently. For him it is where the self hears its own voice, and the world drowns it out: &ldquo;<span class="pd-quote" data-src="emerson">These are the voices which we hear in solitude, but they grow faint and inaudible as we enter into the world</span>.&rdquo; Solitude is a source in Emerson and an injury in the stories. The difference lies in who chose it and in whether anyone answers.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">What do Gregor, Miss Brill, and the boy have in common?</div>
+            <div class="widget-options">
+                <button data-response="This is the plainest link. Gregor wants his place in the household, Miss Brill wants the company, and the boy wants the girl and the bazaar.">Each is cut off from others they wanted to be with.</button>
+                <button data-response="This is a stronger link. Miss Brill assumes she belongs to the company, the boy assumes the bazaar will answer his devotion, and Gregor&rsquo;s household stops acknowledging him.">Each assumes a recognition that proves false.</button>
+                <button data-response="The text does not support this. Gregor is shut away, Miss Brill believes she is among others, and the boy is delayed. Emerson&rsquo;s chosen solitude is a different case.">Each is alone by their own choice.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SELF WITHIN A WHOLE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Marcus answers the problem from the other side. A hand, a foot, or a head &ldquo;<span class="pd-quote" data-src="marcus">lying by itself</span>&rdquo; is a picture of a self cut off from &ldquo;<span class="pd-quote" data-src="marcus">the general unity</span>,&rdquo; and his remedy is the image of fellow-workers: parts of one body that work with their pairs. The self gets its standing from the whole it belongs to.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Herbert&rsquo;s speaker finds standing in a different way. He rages against restraint until a voice calls him &ldquo;<span class="pd-quote" data-src="herbert">Childe</span>,&rdquo; and he answers &ldquo;<span class="pd-quote" data-src="herbert">My Lord</span>.&rdquo; His standing comes from a relation to a caller. Dickinson&rsquo;s hope is different again: it &ldquo;<span class="pd-quote" data-src="dickinson">perches in the soul</span>,&rdquo; and requires neither a crowd nor a caller. All three describe a self that is not complete in itself, or that carries something inside it that does not depend on being seen.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TESTING THE POSITIONS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The table sets the positions side by side. Each row names where the text places a self&rsquo;s standing and what goes wrong in that text.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; WHERE A SELF&rsquo;S STANDING COMES FROM</div>
+            <div style="overflow-x:auto;"><table style="border-collapse: collapse; width: 100%; min-width: 520px;"><thead><tr><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">Text</th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">Source of the self&rsquo;s standing</th><th style="text-align:left; font-size:13px; color:#ffffff; background:#0E1C42; padding:9px 12px; border:1px solid #0E1C42;">What the text shows going wrong</th></tr></thead><tbody><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF; font-weight: bold; color:#0e1c42;">Emerson</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">the self, trusted: <span class="pd-quote" data-src="emerson">Trust thyself</span></td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">conformity: <span class="pd-quote" data-src="emerson">Society everywhere is in conspiracy against the manhood of every one of its members</span></td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8; font-weight: bold; color:#0e1c42;">Marcus</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">the whole the self belongs to: fellow-workers</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">a part cut off: a head <span class="pd-quote" data-src="marcus">lying by itself</span></td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF; font-weight: bold; color:#0e1c42;">Herbert</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">a caller who names the speaker: <span class="pd-quote" data-src="herbert">Childe</span></td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">restraint felt as a cage until the call: <span class="pd-quote" data-src="herbert">Forsake thy cage</span></td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8; font-weight: bold; color:#0e1c42;">Miss Brill</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">an audience she imagined</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#EEF1F8;">recognition assumed and not given: <span class="pd-quote" data-src="mansfield">who wants her?</span></td></tr><tr><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF; font-weight: bold; color:#0e1c42;">Gregor</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">the household that depended on him</td><td style="vertical-align:top; font-size:15px; color:#1a2340; line-height:1.55; padding:9px 12px; border:1px solid #D0D9E8; background:#FFFFFF;">recognition withdrawn: shut away, then called &ldquo;it&rdquo;</td></tr></tbody></table></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">A reading to test is that in these texts solitude harms when recognition has been withdrawn or never given, and helps when it is chosen as a place to hear one&rsquo;s own judgment. A self needs a place to be alone and someone who answers when it speaks. The counter-evidence is in Marcus, who counts cutting oneself off from the whole as a fault even when it is chosen (his inner retreat is into judgment, not away from other people), and in Emerson, who treats the crowd&rsquo;s answer as the danger. The reading holds for the stories and strains against the two thinkers, which is a reason to state it with care.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The voices are heard in solitude and fade among others. For Emerson solitude is where the self is audible to itself." data-hint="Notice where the voices are heard and where they fade. Ask which place Emerson values for them.">
+                <div class="widget-row-prompt">1. Emerson says the voices heard in solitude &ldquo;grow faint and inaudible as we enter into the world.&rdquo; What does this say about solitude?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Solitude is a loss that the world repairs.</button>
+                    <button data-choice="1">Solitude is where the self hears its own voice, and the world drowns it out.</button>
+                    <button data-choice="2">Solitude makes the self fainter and less audible.</button>
+                    <button data-choice="3">Solitude and the world are equally good places to hear oneself.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Correct. The couple&rsquo;s remark shows the company never included her. Marcus&rsquo;s whole and Herbert&rsquo;s caller are presented as real ties." data-hint="Look at what the overheard remark shows about the people she counted as her company.">
+                <div class="widget-row-prompt">2. What separates Miss Brill&rsquo;s belonging from the belonging in Marcus and Herbert?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Hers is solitary, while theirs is shared with others.</button>
+                    <button data-choice="1">Hers is imagined by her alone, while theirs rests on a tie the text treats as real.</button>
+                    <button data-choice="2">Hers is chosen, while theirs is forced on them.</button>
+                    <button data-choice="3">Hers is religious, while theirs is secular.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The household closes the door, which separates it from Emerson&rsquo;s solitude, and withdraws recognition, which separates it from Marcus&rsquo;s whole." data-hint="Ask who closed the door and who stopped answering. Compare that with each thinker&rsquo;s idea of being alone.">
+                <div class="widget-row-prompt">3. Which statement about Gregor&rsquo;s room best fits the evidence from Emerson and Marcus?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It is Emerson&rsquo;s chosen solitude, since Gregor is left alone with his own mind.</button>
+                    <button data-choice="1">It is Marcus&rsquo;s retreat, since Gregor withdraws from distraction.</button>
+                    <button data-choice="2">It is solitude imposed by others, so it gives neither Emerson&rsquo;s chosen solitude nor Marcus&rsquo;s belonging.</button>
+                    <button data-choice="3">It is a punishment that Gregor earns by cutting himself off.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>solitude</strong>: the state of being alone, whether chosen or imposed.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>recognition</strong>: being acknowledged as a person by another.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>belonging</strong>: standing as a member of a household, a company, or a whole.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>counter-evidence</strong>: a fact that strains a reading and has to be addressed.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 8 &middot; Alone in the Cosmos?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

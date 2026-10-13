@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.2; ELA.12.R.2.4 (partial); ELA.12.R.3.3 (partial)" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(4)(H); TEKS 110.39(c)(5)(B)" />
+<title>English IV Honors &middot; What We Owe</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9</div>
+        <div style="font-size: 12px; color: #1a2340;">Synthesis</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 9</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What We Owe</div>
+        <div style="font-size: 16px; color: #1a2340;">A year of texts set side by side. No new reading.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The year&rsquo;s texts answer one question from four directions: what is owed, and to whom.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The module asks what is owed when a problem belongs to everyone. The first three quarters ask it indirectly, about makers and what they make, about monsters and humans, and about the self alone and the self among others. This lesson draws those answers together.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can state how the year&rsquo;s texts treat the good as given and as made.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain where each text places the fault when something is called a monster.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can compare Gregor alone with Frodo accompanied, and state what the comparison shows about what is owed.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">No new reading. The texts named below can be reviewed in the course pages or in your own copies.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; GIVEN AND MADE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The first quarter read seven traditions: the Bhagavad Gita, the Bible, the Confucian Analects, the Buddhist parables, the Qur&rsquo;an, Plato, and Aristotle. They differ widely, and each treats the good as something that comes before the person. It is laid out by a teacher or a scripture, learned as a way, or built into what a human being is. Aristotle adds that virtue is made by practice, though toward an end that the human nature supplies.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Plato&rsquo;s cave adds a duty to the others. The freed prisoner has seen more than his old companions, and the text says what it costs to go back:</p>
+        <blockquote class="pd-quote" data-src="plato" style="margin: 0 0 6px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;...if anyone tried to loose another and lead him up to the light, let them only catch the offender, and they would put him to death.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: 0 0 12px 0;">Plato, <em>Republic</em> VII, trans. Jowett (public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second quarter turned to the good as something made. <em>Frankenstein</em> shows a maker who walks away from what he made, and a made creature who asks who else is to blame. Nietzsche asks who decides what is good and answers that values have a history and can be made anew, with a warning that whoever fights monsters risks becoming one. Blake&rsquo;s question from the third quarter belongs with these:</p>
+        <blockquote class="pd-quote" data-src="blake" style="margin: 0 0 6px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">Did He who made the lamb make thee?</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: 0 0 12px 0;">Blake, &ldquo;The Tyger&rdquo;, <em>Songs of Experience</em> (public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Read together, the two sets say that a given good can be held without being understood and that a made good can be made by the strong for themselves alone. In both, the maker or the teacher owes something to whoever stands under them, and the one who stands under them owes something back.</p>
+
+    </div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which pairing across the year looks closest?</div>
+            <div class="widget-options">
+                <button data-response="Both are shut away by the people responsible for them. The pairing also carries a difference: the creature is made by one person and Gregor is changed, and each is owed care for different reasons.">Gregor and the creature, each cast out by those who made or kept him.</button>
+                <button data-response="Both are given sight that others lack and asked to act on it. The text of the cave says the others may punish them, and the Council gives Frodo a danger of a different kind.">The freed prisoner and Frodo, each sent back or sent on for others.</button>
+                <button data-response="Both grasp for a power that ends by harming what they love. The pairing shows how a good aim and a grasp can sit together.">Victor and Boromir, each reaching for a power that is not his to hold.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; MONSTER AND HUMAN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Each quarter puts a figure in front of the reader whom others call a monster. The texts do not agree on where the fault lies, and they share one habit: the monstrous is located in conduct more often than in bodies.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The creature is made, then shunned, and the novel lets him say so in the last pages. Gregor takes an insect&rsquo;s body, and the story keeps its attention on the household that valued him as a source of income and then withdrew care as he failed. Gollum is twisted by the Ring over a long age, and Bilbo pities him and spares his life. Boromir is not monstrous in body or origin. He does a monstrous thing from a real loyalty with nothing above it, and his horror afterward is real. Galadriel shows the other side: she is offered the Ring freely, names her desire, and sets it down.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The comparison does not excuse anyone. The creature kills, Gollum murders, and Boromir lays hands on a friend. It shows that in each case the harm grows from a relation that failed, and that the failure had more than one party.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE CALL AND THE SELF AMONG OTHERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The third quarter set two answers to the question of how a self should stand. Emerson makes the individual&rsquo;s own mind the court of last appeal:</p>
+        <blockquote class="pd-quote" data-src="emerson" style="margin: 0 0 6px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Whoso would be a man must be a nonconformist.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: 0 0 12px 0;">Emerson, &ldquo;Self-Reliance&rdquo; (1841; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Marcus Aurelius places the self inside a whole:</p>
+        <blockquote class="pd-quote" data-src="marcus" style="margin: 0 0 6px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;...for we are all born to be fellow-workers, as the feet, the hands, and the eyelids...&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: 0 0 12px 0;">Marcus Aurelius, <em>Meditations</em> (public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gregor stands between the two without being able to choose. His isolation is imposed by others, and the story leaves open whether his end is a gift of self or an erasure of self. Miss Brill and the boy in &ldquo;Araby&rdquo; also stand alone in company. Herbert&rsquo;s poem gives the turn that these figures never get, a revolt that ends with an answer to a call:</p>
+        <blockquote class="pd-quote" data-src="herbert" style="margin: 0 0 6px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">Me thoughts I heard one calling, Childe:<br>And I reply&apos;d, My Lord.</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: 0 0 12px 0;">George Herbert, &ldquo;The Collar&rdquo; (1633; public domain)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The fourth quarter gives the call a communal form. At the Council the Ring is everyone&rsquo;s problem and no one people&rsquo;s to carry, and no one can lay it on another. The Company is neither chosen nor inherited. Each member comes by an individual call that joins a personal purpose, loyalty to a people, and a higher claim of what is right, and no oath binds them. Frodo takes the task, Sam goes where Frodo goes, and Aragorn declines to force the choice. When the Company breaks, the call does not.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; WHAT WE OWE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The year&rsquo;s answers can be set in one table. Each row names the texts that speak to a question and the claim they support.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 18px 20px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#9878; THE YEAR IN FOUR ANSWERS</div>
+            <div style="overflow-x: auto;"><table style="border-collapse: collapse; width: 100%; min-width: 560px;">
+<tr><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Quarter</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">Texts</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">What is owed</th><th style="text-align:left; padding:10px 12px; font-size:13px; color:#ffffff; background:#0E1C42; font-weight:600; vertical-align:bottom;">To whom</th></tr>
+<tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">1 &middot; Ancient Wisdom</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The seven traditions; Plato&rsquo;s cave</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">A life shaped by a good that precedes the self, and a return to those still in the dark</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Teachers, neighbours, and those who have not yet seen</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">2 &middot; Creature and Creator</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;"><em>Frankenstein</em>; Nietzsche</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Care for what one has made, and an honest account of who decides what is good</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">The made, and those who live under the maker&rsquo;s values</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF; color:#0e1c42; font-weight:600;">3 &middot; What We Become</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;"><em>The Metamorphosis</em>; Emerson; Marcus; the poems</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">Recognition of the person, and a self that answers a call beyond itself</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#FFFFFF;">The one in the room, and the whole of which one is a part</td></tr><tr><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA; color:#0e1c42; font-weight:600;">4 &middot; The Fellowship</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;"><em>The Fellowship of the Ring</em></td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">An answer to a call that belongs to no one people and cannot be forced</td><td style="padding:10px 12px; font-size:15px; color:#1a2340; line-height:1.5; vertical-align:top; border-top:1px solid #D0D9E8; background:#F4F6FA;">Everyone, through the person who is nearest and the task that is one&rsquo;s own</td></tr>
+            </table></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Gregor alone and Frodo accompanied are the clearest pair in the table. Gregor is shut away and the people who owed him recognition withdraw it. Frodo goes on alone for everyone&rsquo;s sake, and Sam refuses to let him. The difference is not in the burden, which each carries for others. It lies in whether someone comes to the door. The Company shows that a duty can be answered freely and still be shared, and that what is owed to a person includes company on the way.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the texts best support.</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. Victor&rsquo;s refusal does not end his responsibility, and the novel says so through the creature. Nietzsche&rsquo;s own warning about monsters points the same way." data-hint="Ask what follows when a maker abandons what is made, and what Nietzsche says happens to the one who fights monsters.">
+                <div class="widget-row-prompt">1. Nietzsche holds that values can be made, and <em>Frankenstein</em> shows a maker who disowns what he made. Which claim do the two together best support?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A good made by the strong alone is secure, since the maker answers to no one.</button>
+                    <button data-choice="1">A made thing carries the maker&rsquo;s responsibility even when the maker disowns it.</button>
+                    <button data-choice="2">A good handed down by tradition cannot be questioned by a thoughtful reader.</button>
+                    <button data-choice="3">A creature owes obedience to its maker whatever the maker does.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Correct. Each text keeps the conduct of others in view next to the harm done by the one called a monster. The texts do not excuse the harm." data-hint="Several options place the fault in the body or in the sufferer alone. Pick the option that holds the surrounding people in view as well.">
+                <div class="widget-row-prompt">2. The creature, Gregor, and Gollum are each treated as a monster. What do the texts share in placing the fault?</div>
+                <div class="widget-options">
+                    <button data-choice="0">In the body, which marks each as a different kind of being.</button>
+                    <button data-choice="1">In a single act of cruelty that each one commits without cause.</button>
+                    <button data-choice="2">In the sufferer&rsquo;s refusal to accept help from others.</button>
+                    <button data-choice="3">In what others do or withhold, beside what each one does.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="2" data-fb="Right. The Council compels no one, and no oath is sworn. The members come by separate roads that meet in one task." data-hint="Look for the option that is neither assignment nor inheritance and that mentions more than one source of the call.">
+                <div class="widget-row-prompt">3. The Fellowship was neither chosen nor inherited. Which statement fits the way its members came together?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Each was assigned by the ruler of a people and obeyed the order.</button>
+                    <button data-choice="1">Each inherited a post from a parent and kept the family duty.</button>
+                    <button data-choice="2">Each answered a personal call joining purpose, loyalty, and what is right.</button>
+                    <button data-choice="3">Each swore an oath to one leader at the Council.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; TAKEAWAY</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;">A given good and a made good both carry duties: the maker and the teacher owe care, and those who stand under them owe an answer.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;">The texts place the monstrous in a failed relation more often than in a body, and none excuses the harm.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;">A call that belongs to everyone cannot be forced on anyone, and it is carried best with company.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 9 &middot; What We Owe</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

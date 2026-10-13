@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="optima:standards:fl-best" content="ELA.12.R.1.1; ELA.12.R.1.2; ELA.12.R.1.3" />
+<meta name="optima:standards:tx-teks" content="TEKS 110.39(c)(6)(A); TEKS 110.39(c)(6)(B)" />
+<title>English IV Honors &middot; The Shadow of the Past</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH IV HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 4 &middot; Module 4: The Fellowship of the Ring &middot; Week 1 &middot; Literature</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #1a2340;">The Fellowship of the Ring</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Fellowship of the Ring</div>
+        <div style="font-size: 12px; color: #1a2340;">J. R. R. Tolkien, 1954 (read in your own copy)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Question</div>
+        <div style="font-size: 16px; color: #0e1c42;">What do we owe when a problem belongs to everyone?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Week 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Shadow of the Past</div>
+        <div style="font-size: 16px; color: #1a2340;">Literature &middot; Week 1</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Chapter 2 is one long conversation, and Gandalf&rsquo;s history turns a gold ring into a question about what each holder did with it.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The chapter explains the Ring, but it also explains a creature. Gollum is the clearest case in the book of how a person comes to be called a monster, and Bilbo&rsquo;s pity toward him is the first sign that the Ring&rsquo;s story is not only a story of power.</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can trace the Ring from its making to Frodo, naming how each holder came to it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain what turned Sm&eacute;agol into Gollum, using evidence from Gandalf&rsquo;s account.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">I can explain what Gandalf means by calling the finding of the Ring intended, and what the word leaves unsaid.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #D0D9E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; READING</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Read Book I, Chapter 2, &ldquo;The Shadow of the Past&rdquo;, in your copy.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE RING&rsquo;S HISTORY</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gandalf tells the story in the order Frodo needs it. The Ring was made by Sauron, who put much of his own power into it so that he could rule the lesser rings. It was taken from him when Isildur cut it from his hand at the end of a great war in which two kings died. Isildur then lost it. Ambushed by orcs near the Gladden Fields, he swam the river, the Ring slipped from his finger, and he was shot.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Ring lay in the river until a fisherman named D&eacute;agol found it. His friend Sm&eacute;agol was watching, killed him for it, and took it under the mountains, where it stayed for ages until Bilbo found it in the dark. Before telling this history, Gandalf heats the Ring in the fire. Frodo sees fiery letters appear but cannot read them, and Gandalf reads the inscription that identifies it as the One Ring.</p>
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128279; WHO HELD THE RING, AND HOW IT CAME TO THEM</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:stretch;">
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>Sauron</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Made it, and put much of his own power into it.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>Isildur</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Cut it from Sauron&rsquo;s hand and kept it. It slipped away as he swam.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>D&eacute;agol</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Found it while fishing. Murdered by his friend for it.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>Sm&eacute;agol / Gollum</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Took it by force, hid under the mountains, and was consumed by it.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#C7922C; margin-bottom:4px;"><strong>Bilbo</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Found it in the dark. Spared Gollum, kept the Ring secret, and gave it up with Gandalf&rsquo;s help.</div></div>
+                <div style="flex:1; min-width:150px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #3B4E8C; border-radius:6px; padding:10px 12px;"><div style="font-size:13px; color:#3B4E8C; margin-bottom:4px;"><strong>Frodo</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Inherits it. Learns what it is.</div></div>
+            </div>
+        </div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; FIRST READ</div>
+            <div class="widget-question">Which reading best fits Gandalf&rsquo;s account of how Sm&eacute;agol became Gollum?</div>
+            <div class="widget-options">
+                <button data-response="Partly supported. The murder follows within moments of the find. But Gandalf also describes a curious young creature with a family and a friend, and he says the Ring fed on him over a very long time.">He was a monster from the start, and the Ring only revealed it.</button>
+                <button data-response="This overreaches. Sm&eacute;agol strangles D&eacute;agol before the Ring has had time to shape him. Gandalf treats the first murder as his deed and the story he told himself afterward as his defence.">The Ring made him a monster, so the choice was never really his.</button>
+                <button data-response="This keeps both parts of Gandalf&rsquo;s account: a choice made at the river, a solitary life that followed, and a ring that deepened what was already there.">A deed and a long habit made him one, and the Ring fed both.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHAT MADE A MONSTER</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gandalf&rsquo;s account of Sm&eacute;agol follows a sequence. He wants the Ring because it is beautiful and because it is his birthday. He kills for it. He uses its power for small meanness, spying and theft. His family shuns him and finally casts him out. He retreats to the dark, hating the sun and the Ring in turn, until the Ring has taken over his mind.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The cause Gandalf gives is a deed, a habit, and an object, and the account does not begin with a change of body. Sm&eacute;agol&rsquo;s body changes afterward. This is the reverse of the order in Kafka&rsquo;s story, where Gregor&rsquo;s body changes first and the family&rsquo;s conduct decides whether he is treated as a person. Gollum raises the question of how much of a monster is made by what he does and how much by what is done around him.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frodo&rsquo;s first response is disgust, and he finds the kinship with hobbits an abominable idea. Gandalf does not soften the facts. He says only that the story is sad and that <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">it might have happened to others, even to some hobbits that I have known</q> (Book I, Chapter 2). He adds that Gollum was not wholly ruined, since a corner of his mind was still his own, and that a kind voice in the dark, Bilbo&rsquo;s during the riddle-game, had let some old light in.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">The Ring itself is part of the explanation. Gandalf insists that <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">A Ring of Power looks after itself, Frodo.</q> (Book I, Chapter 2) In his account the Ring was not left behind by Gollum. It left him, because its master was stirring and it could make no more use of a creature so small. This makes the Ring something like a creature of its maker, with an aim of its own, and every holder a part of that aim without knowing it.</p>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; PITY, AND A FIRST HINT OF A CALL</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Prologue already reports that Bilbo, with his sword in hand and Gollum at a disadvantage, did not strike. Gandalf now names the reason and gives it weight:</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">Pity? It was Pity that stayed his hand.</q> (Book I, Chapter 2)</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frodo hears this and objects. Gollum has done terrible things, and Frodo thinks he deserves death. Gandalf&rsquo;s answer sets a limit on judgment: <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">Many that live deserve death. And some that die deserve life.</q> (Book I, Chapter 2) No one in the room can restore the dead, so no one should be quick to hand out death. Gandalf adds that Gollum is bound up in the fate of the Ring and may have a part to play.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The same conversation offers the first hint that Frodo is called to something. Gandalf says the finding was not only the Ring&rsquo;s doing and not the doing of its maker either: <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">Bilbo was meant to find the Ring, and not by its maker</q> (Book I, Chapter 2). He draws the conclusion that Frodo was also meant to have it. Later, when Frodo asks why it came to him, Gandalf says it was not for power or wisdom or any merit that others lack. The text leaves the source of the &ldquo;meant&rdquo; unnamed.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Frodo does not welcome the thought; he answers that it is not encouraging. Earlier, on hearing that the Enemy has returned, he has already said <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">I wish it need not have happened in my time</q> (Book I, Chapter 2). Gandalf agrees that no one chooses the times they live in, and he says what remains is <q class="cr-quote" data-src="tolkien" style="font-style: italic; color: #0e1c42;">what to do with the time that is given us</q> (Book I, Chapter 2). Near the end of the conversation Gandalf refuses the Ring when Frodo offers it, warning that its way to his own heart would be through pity, and he says the decision lies with Frodo. Frodo decides that, for now, the Ring stays in his care, and that he must leave the Shire.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE EVIDENCE SHOW?</div>
+            <div class="widget-question">Choose the reading the text best supports.</div>
+            <div class="widget-row" data-correct="0" data-fb="Correct. Gandalf says the Ring was trying to get back to its master and moved on when it could. Size is part of his reasoning, but the aim comes first." data-hint="Reread the passage where Gandalf says the Ring abandoned Gollum. Ask what the Ring was working toward, not only what it could no longer do with him.">
+                <div class="widget-row-prompt">1. Gandalf says the Ring left Gollum. What does this claim add to the Ring&rsquo;s history?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It treats the Ring as having its own aim, so the chain of holders is partly its doing.</button>
+                    <button data-choice="1">It shows that Gollum finally chose to give the Ring up in order to save himself from it.</button>
+                    <button data-choice="2">It shows that the Ring tires of small owners and picks each new holder by size alone.</button>
+                    <button data-choice="3">It shows that Bilbo took the Ring from Gollum by a trick during the riddle-game itself.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="2" data-fb="Right. Gandalf credits Bilbo&rsquo;s pity for how little the Ring harmed him and warns Frodo against eager judgment. He does not call Gollum harmless, and the Prologue says Bilbo carried a sword." data-hint="Return to Gandalf&rsquo;s reply beginning with the word pity. Note what he says Bilbo gained from it, and what he says about judging.">
+                <div class="widget-row-prompt">2. Frodo says Bilbo should have killed Gollum. How does Gandalf answer?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He agrees, but says Bilbo had no weapon to use against Gollum at the time.</button>
+                    <button data-choice="1">He says Gollum is harmless, so he is not worth the trouble and risk of killing.</button>
+                    <button data-choice="2">He says pity spared Bilbo the worst of the Ring; death is not Frodo&rsquo;s to give.</button>
+                    <button data-choice="3">He says Gollum is already past all help, so the question of mercy has no force.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Correct. Gandalf says there was a design beyond the maker&rsquo;s and says he can put it no plainer. He also says it came to Frodo for no merit that others lack. The source stays unnamed." data-hint="Find where Gandalf says he can put it no plainer. Ask whether he names a person, a power, or a reason, and what he says about merit.">
+                <div class="widget-row-prompt">3. Gandalf says the finding of the Ring was intended, not an accident. What is the most careful reading?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Bilbo earned the Ring by being the cleverest and boldest hobbit in the Shire.</button>
+                    <button data-choice="1">Something beyond the maker shaped the finding; the text does not say what.</button>
+                    <button data-choice="2">The Ring chose Bilbo because it wished to be carried back to the Shire.</button>
+                    <button data-choice="3">Gandalf had arranged the riddle-game himself so that Bilbo would find the Ring.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128273; KEY TERMS</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Sauron</strong>: the Dark Lord, maker of the One Ring.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Isildur</strong>: the man who cut the Ring from Sauron&rsquo;s hand and lost it in the River.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>pity</strong>: as Gandalf uses it, the decision to spare an enemy when killing him is not necessary.</div>
+        <div style="border-left: 3px solid #D0D9E8; padding-left: 14px; margin-bottom: 8px; font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>defence</strong>: an excuse a person repeats to himself until he almost believes it, as Gollum does about the birthday.</div>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH IV &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 1 &middot; The Shadow of the Past</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
